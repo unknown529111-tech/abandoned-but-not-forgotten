@@ -115,6 +115,7 @@
   background: var(--accent);
   box-shadow: 0 0 8px rgba(66, 191, 255, 0.7);
   transition: transform var(--dur-fast) var(--ease-standard), box-shadow var(--dur-fast) var(--ease-standard), background var(--dur-fast) var(--ease-standard);
+  pointer-events: none;
 }
 .tl-point:hover .tl-point__dot,
 .tl-point--hover .tl-point__dot,

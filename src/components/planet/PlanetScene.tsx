@@ -102,7 +102,7 @@ export default function PlanetScene({ body, points, onHover, onClickPoint, hover
               <sphereGeometry args={[0.07, 16, 16]} />
               <meshBasicMaterial color="#42BFFF" />
             </mesh>
-            <Html center distanceFactor={8}            portal={portalRef as any} style={{ pointerEvents: 'auto' }}>
+            <Html center distanceFactor={1}            portal={portalRef as any} style={{ pointerEvents: 'auto' }}>
               <button
                 type="button"
                 className={`planet-point${isHovered ? ' planet-point--hover' : ''}`}

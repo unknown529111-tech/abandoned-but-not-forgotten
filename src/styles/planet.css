@@ -94,6 +94,7 @@
   background: #42BFFF;
   box-shadow: 0 0 8px rgba(66, 191, 255, 0.9);
   transition: transform var(--dur-fast) var(--ease-standard), box-shadow var(--dur-fast) var(--ease-standard);
+  pointer-events: none;
 }
 .planet-point:hover .planet-point__dot,
 .planet-point--hover .planet-point__dot {

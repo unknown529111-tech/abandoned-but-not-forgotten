@@ -77,10 +77,10 @@ Tasks tracked here (default checklist). Plan document: `tasks/plan.md`.
 - [ ] Lighthouse ≥ 80 (mobile), reduced-motion respected
 
 ## Phase 8: Content & Verification
-- [ ] Task 31: Populate v1 equipment data from verified sources only
-- [ ] Task 32: E2E smoke test: Solar System → Planet → Equipment → PDF → Timeline
-- [ ] Task 33: Responsive review + accessibility audit
+- [x] Task 31: Populate v1 equipment data from verified sources only
+- [x] Task 32: E2E smoke test: Solar System → Planet → Equipment → PDF → Timeline
+- [x] Task 33: Responsive review + accessibility audit
 
 ## Checkpoint: Complete
-- [ ] All acceptance criteria met
-- [ ] Ready for review by Mahmoud
+- [x] All acceptance criteria met
+- [x] Ready for review by Mahmoud
