@@ -41,11 +41,11 @@ Tasks tracked here (default checklist). Plan document: `tasks/plan.md`.
 - [ ] Hover shows tooltip; click navigates; back restores view
 
 ## Phase 4: Equipment Detail
-- [ ] Task 15: 3D model viewer (OrbitControls, zoom, reset) + image fallback
-- [ ] Task 16: Simple View cards (name, short desc, status)
-- [ ] Task 17: Detailed View expand/collapse animation
-- [ ] Task 18: Detailed fields (story, dates, specs, tables, coords, achievements, sources)
-- [ ] Task 19: Back to Planet preserves camera/zoom
+- [x] Task 15: 3D model viewer (OrbitControls, zoom, reset) + image fallback
+- [x] Task 16: Simple View cards (name, short desc, status)
+- [x] Task 17: Detailed View expand/collapse animation
+- [x] Task 18: Detailed fields (story, dates, specs, tables, coords, achievements, sources)
+- [x] Task 19: Back to Planet preserves camera/zoom
 
 ## Checkpoint: Equipment Detail
 - [ ] Model rotates/zooms; toggle works; back restores
