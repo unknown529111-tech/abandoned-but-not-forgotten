@@ -1,0 +1,1919 @@
+[
+  {
+    "id": "viking-1",
+    "bodyId": "mars",
+    "name": {
+      "en": "Viking 1 Lander",
+      "ar": "لاندر فايكنغ 1"
+    },
+    "shortDescription": {
+      "en": "First fully successful Mars landing; studied soil chemistry and weather.",
+      "ar": "أول هبوط ناجح بالكامل على المريخ؛ درس كيمياء التربة والطقس."
+    },
+    "status": "concluded",
+    "launchDate": "1975-08-20",
+    "arrivalDate": "1976-07-20",
+    "lastContactDate": "1982-11-11",
+    "coord": {
+      "lat": 22.27,
+      "lon": 312.05,
+      "source": "NASA GISS Mars24 lander list"
+    },
+    "specs": {
+      "Landing site": "Chryse Planitia",
+      "Active until": "Sol 2243"
+    },
+    "story": {
+      "en": "Viking 1 touched down in Chryse Planitia on 20 July 1976 and operated for over six years, returning the first clear pictures from the Martian surface.",
+      "ar": "هبط فايكنغ 1 في خريسي بلانيشا في 20 يوليو 1976 وعمل لأكثر من ست سنوات، وأرسل أول صور واضحة من سطح المريخ."
+    },
+    "achievements": {
+      "en": [
+        "First completely successful Mars landing",
+        "First clear images from Martian surface",
+        "Soil chemistry experiments"
+      ],
+      "ar": [
+        "أول هبوط ناجح بالكامل على المريخ",
+        "أول صور واضحة من سطح المريخ",
+        "تجارب كيمياء التربة"
+      ]
+    },
+    "sources": [
+      {
+        "title": "NASA GISS Mars24 Lander Missions",
+        "url": "https://www.giss.nasa.gov/tools/mars24/help/landers.html"
+      },
+      {
+        "title": "NSSDC Master Catalog - Viking 1",
+        "url": "https://nssdc.gsfc.nasa.gov/database/MasterCatalog?sc=1975-075C"
+      }
+    ]
+  },
+  {
+    "id": "viking-2",
+    "bodyId": "mars",
+    "name": {
+      "en": "Viking 2 Lander",
+      "ar": "لاندر فايكنغ 2"
+    },
+    "shortDescription": {
+      "en": "Twin lander; operated from Utopia Planitia until 1980.",
+      "ar": "لاندر توأم؛ عمل من يوتوبيا بلانيشا حتى 1980."
+    },
+    "status": "concluded",
+    "launchDate": "1975-09-09",
+    "arrivalDate": "1976-09-03",
+    "lastContactDate": "1980-04-11",
+    "coord": {
+      "lat": 48.27,
+      "lon": 134.28,
+      "source": "NASA GISS Mars24 lander list"
+    },
+    "specs": {
+      "Landing site": "Utopia Planitia",
+      "Active until": "Sol 1280"
+    },
+    "story": {
+      "en": "Viking 2 landed in Utopia Planitia on 3 September 1976 and relayed weather and soil data for over three years.",
+      "ar": "هبط فايكنغ 2 في يوتوبيا بلانيشا في 3 سبتمبر 1976 ونقل بيانات الطقس والتربة لأكثر من ثلاث سنوات."
+    },
+    "achievements": {
+      "en": [
+        "Surface weather monitoring",
+        "Soil analysis"
+      ],
+      "ar": [
+        "مراقبة طقس السطح",
+        "تحليل التربة"
+      ]
+    },
+    "sources": [
+      {
+        "title": "NASA GISS Mars24 Lander Missions",
+        "url": "https://www.giss.nasa.gov/tools/mars24/help/landers.html"
+      },
+      {
+        "title": "NSSDC Master Catalog - Viking 2",
+        "url": "https://nssdc.gsfc.nasa.gov/database/MasterCatalog?sc=1975-083C"
+      }
+    ]
+  },
+  {
+    "id": "mars-2",
+    "bodyId": "mars",
+    "name": {
+      "en": "Mars 2 Lander",
+      "ar": "لاندر مارس 2"
+    },
+    "shortDescription": {
+      "en": "Soviet lander that crashed on Mars; first attempted Mars rover (PrOP-M) never deployed.",
+      "ar": "لاندر سوفييتي تحطم على المريخ؛ أول محاولة روفر (PrOP-M) لم تُنشر."
+    },
+    "status": "concluded",
+    "launchDate": "1971-05-19",
+    "arrivalDate": "1971-11-27",
+    "specs": {
+      "Outcome": "Crashed on impact"
+    },
+    "story": {
+      "en": "Mars 2's descent module crashed on Mars on 27 November 1971; its PrOP-M rover was never deployed.",
+      "ar": "تحطم وحدة هبوط مارس 2 على المريخ في 27 نوفمبر 1971؛ ولم يُنشر روفر PrOP-M."
+    },
+    "sources": [
+      {
+        "title": "NASA JPL - Mars 3 lander found",
+        "url": "https://www.jpl.nasa.gov/news/nasa-mars-orbiter-images-may-show-1971-soviet-lander/"
+      }
+    ]
+  },
+  {
+    "id": "mars-3",
+    "bodyId": "mars",
+    "name": {
+      "en": "Mars 3 Lander",
+      "ar": "لاندر مارس 3"
+    },
+    "shortDescription": {
+      "en": "First spacecraft to achieve a soft landing on Mars; transmitted for only 14.5 seconds.",
+      "ar": "أول مركبة تحقق هبوطًا ناعمًا على المريخ؛ أرسلت إشارات لمدة 14.5 ثانية فقط."
+    },
+    "status": "lost-contact",
+    "launchDate": "1971-05-28",
+    "arrivalDate": "1971-12-02",
+    "lastContactDate": "1971-12-02",
+    "coord": {
+      "lat": -45.0,
+      "lon": 202.0,
+      "source": "NASA JPL news article (45 deg S, 202 deg E)"
+    },
+    "specs": {
+      "Landing site": "Ptolemaeus Crater",
+      "Transmission": "14.5 seconds"
+    },
+    "story": {
+      "en": "Mars 3 soft-landed on 2 December 1971, the first such landing on Mars, but transmission ceased after 14.5 seconds.",
+      "ar": "هبط مارس 3 ناعمًا في 2 ديسمبر 1971، أول هبوط من نوعه على المريخ، لكن الإرسال توقف بعد 14.5 ثانية."
+    },
+    "achievements": {
+      "en": [
+        "First soft landing on Mars"
+      ],
+      "ar": [
+        "أول هبوط ناعم على المريخ"
+      ]
+    },
+    "sources": [
+      {
+        "title": "NASA JPL - Mars 3 lander",
+        "url": "https://www.jpl.nasa.gov/news/nasa-mars-orbiter-images-may-show-1971-soviet-lander/"
+      }
+    ]
+  },
+  {
+    "id": "mars-pathfinder",
+    "bodyId": "mars",
+    "name": {
+      "en": "Mars Pathfinder (Sojourner)",
+      "ar": "مارس باثفايندر (سوجورنر)"
+    },
+    "shortDescription": {
+      "en": "First rover on Mars (Sojourner); landed in Ares Vallis.",
+      "ar": "أول روفر على المريخ (سوجورنر)؛ هبط في أريس فاليس."
+    },
+    "status": "concluded",
+    "launchDate": "1996-12-04",
+    "arrivalDate": "1997-07-04",
+    "lastContactDate": "1997-10-07",
+    "coord": {
+      "lat": 19.47,
+      "lon": 326.75,
+      "source": "NASA GISS Mars24 lander list"
+    },
+    "specs": {
+      "Landing site": "Ares Vallis (Carl Sagan Memorial Station)",
+      "Rover travel": "~100 m"
+    },
+    "story": {
+      "en": "Mars Pathfinder landed on 4 July 1997 and deployed Sojourner, the first rover on Mars, which traveled about 100 m.",
+      "ar": "هبط مارس باثفايندر في 4 يوليو 1997 ونشر سوجورنر، أول روفر على المريخ، الذي قطع نحو 100 م."
+    },
+    "achievements": {
+      "en": [
+        "First rover on Mars",
+        "Airbag landing technique demonstrated"
+      ],
+      "ar": [
+        "أول روفر على المريخ",
+        "إثبات تقنية الهبوط بالوسائد الهوائية"
+      ]
+    },
+    "sources": [
+      {
+        "title": "NASA GISS Mars24 Lander Missions",
+        "url": "https://www.giss.nasa.gov/tools/mars24/help/landers.html"
+      },
+      {
+        "title": "NSSDC Master Catalog - Mars Pathfinder",
+        "url": "https://nssdc.gsfc.nasa.gov/database/MasterCatalog?sc=1996-068A"
+      }
+    ]
+  },
+  {
+    "id": "spirit",
+    "bodyId": "mars",
+    "name": {
+      "en": "Spirit (MER-A)",
+      "ar": "سبيريت (MER-A)"
+    },
+    "shortDescription": {
+      "en": "Mars Exploration Rover; operated 6 years in Gusev Crater.",
+      "ar": "روفر استكشاف المريخ؛ عمل 6 سنوات في فوهة غوسف."
+    },
+    "status": "concluded",
+    "launchDate": "2003-06-10",
+    "arrivalDate": "2004-01-04",
+    "lastContactDate": "2010-03-22",
+    "coord": {
+      "lat": -14.57,
+      "lon": 175.48,
+      "source": "NASA GISS Mars24 lander list"
+    },
+    "specs": {
+      "Landing site": "Gusev Crater (Columbia Memorial Station)",
+      "Travel": "~7.7 km"
+    },
+    "story": {
+      "en": "Spirit landed on 4 January 2004 and worked for six years before becoming stuck in soft soil; last contact was 22 March 2010.",
+      "ar": "هبط سبيريت في 4 يناير 2004 وعمل ست سنوات قبل أن يعلق في تربة ناعمة؛ آخر اتصال في 22 مارس 2010."
+    },
+    "achievements": {
+      "en": [
+        "Evidence of past water",
+        "Climbed Husband Hill"
+      ],
+      "ar": [
+        "أدلة على ماء في الماضي",
+        "تسلق تلة هازباند"
+      ]
+    },
+    "sources": [
+      {
+        "title": "NASA GISS Mars24 Lander Missions",
+        "url": "https://www.giss.nasa.gov/tools/mars24/help/landers.html"
+      },
+      {
+        "title": "NASA Science - Spirit",
+        "url": "https://science.nasa.gov/mission/mer-spirit/"
+      }
+    ]
+  },
+  {
+    "id": "opportunity",
+    "bodyId": "mars",
+    "name": {
+      "en": "Opportunity (MER-B)",
+      "ar": "أوبورتيونيتي (MER-B)"
+    },
+    "shortDescription": {
+      "en": "Mars Exploration Rover; operated 14+ years in Meridiani Planum.",
+      "ar": "روفر استكشاف المريخ؛ عمل أكثر من 14 سنة في مريدیاني بلانيشا."
+    },
+    "status": "concluded",
+    "launchDate": "2003-07-07",
+    "arrivalDate": "2004-01-25",
+    "lastContactDate": "2018-06-10",
+    "endDate": "2019-02-13",
+    "coord": {
+      "lat": -1.95,
+      "lon": 354.47,
+      "source": "NASA GISS Mars24 lander list"
+    },
+    "specs": {
+      "Landing site": "Meridiani Planum (Challenger Memorial Station)",
+      "Travel": "~45 km"
+    },
+    "story": {
+      "en": "Opportunity landed on 25 January 2004 and roved for 14 years; a 2018 dust storm ended the mission, declared over on 13 February 2019.",
+      "ar": "هبط أوبورتيونيتي في 25 يناير 2004 وتجول 14 سنة؛ عاصفة غبار 2018 أنهت المهمة، أُعلنت منتهية في 13 فبراير 2019."
+    },
+    "achievements": {
+      "en": [
+        "Marathon distance on Mars",
+        "Evidence of ancient water"
+      ],
+      "ar": [
+        "مسافة ماراثون على المريخ",
+        "أدلة على ماء قديم"
+      ]
+    },
+    "sources": [
+      {
+        "title": "NASA GISS Mars24 Lander Missions",
+        "url": "https://www.giss.nasa.gov/tools/mars24/help/landers.html"
+      }
+    ]
+  },
+  {
+    "id": "phoenix",
+    "bodyId": "mars",
+    "name": {
+      "en": "Phoenix Lander",
+      "ar": "لاندر فونيكس"
+    },
+    "shortDescription": {
+      "en": "Polar lander that confirmed water ice in Martian soil.",
+      "ar": "لاندر قطبي أكد وجود جليد ماء في تربة المريخ."
+    },
+    "status": "concluded",
+    "launchDate": "2007-08-04",
+    "arrivalDate": "2008-05-25",
+    "lastContactDate": "2008-11-02",
+    "coord": {
+      "lat": 68.22,
+      "lon": 234.25,
+      "source": "NASA GISS Mars24 lander list"
+    },
+    "specs": {
+      "Landing site": "Vastitas Borealis"
+    },
+    "story": {
+      "en": "Phoenix landed in the northern polar region on 25 May 2008 and confirmed water ice; last contact was 2 November 2008.",
+      "ar": "هبط فونيكس في المنطقة القطبية الشمالية في 25 مايو 2008 وأكد وجود جليد ماء؛ آخر اتصال في 2 نوفمبر 2008."
+    },
+    "achievements": {
+      "en": [
+        "Confirmed water ice on Mars"
+      ],
+      "ar": [
+        "تأكيد جليد الماء على المريخ"
+      ]
+    },
+    "sources": [
+      {
+        "title": "NASA GISS Mars24 Lander Missions",
+        "url": "https://www.giss.nasa.gov/tools/mars24/help/landers.html"
+      }
+    ]
+  },
+  {
+    "id": "curiosity",
+    "bodyId": "mars",
+    "name": {
+      "en": "Curiosity (MSL)",
+      "ar": "كيوريوسيتي (MSL)"
+    },
+    "shortDescription": {
+      "en": "Car-sized rover exploring Gale Crater since 2012.",
+      "ar": "روفر بحجم سيارة يكتشف فوهة غيل منذ 2012."
+    },
+    "status": "active",
+    "launchDate": "2011-11-26",
+    "arrivalDate": "2012-08-06",
+    "coord": {
+      "lat": -4.59,
+      "lon": 137.44,
+      "source": "NASA GISS Mars24 lander list"
+    },
+    "specs": {
+      "Landing site": "Gale Crater (Bradbury Landing)",
+      "Mass": "~899 kg"
+    },
+    "story": {
+      "en": "Curiosity landed on 6 August 2012 via sky crane and continues to study Gale Crater's past habitability.",
+      "ar": "هبط كيوريوسيتي في 6 أغسطس 2012 عبر رافعة السماء ولا يزال يدرس قابلية السكن في فوهة غيل."
+    },
+    "achievements": {
+      "en": [
+        "Evidence of ancient lake",
+        "Organic molecules detected"
+      ],
+      "ar": [
+        "أدلة على بحيرة قديمة",
+        "اكتشاف جزيئات عضوية"
+      ]
+    },
+    "sources": [
+      {
+        "title": "NASA GISS Mars24 Lander Missions",
+        "url": "https://www.giss.nasa.gov/tools/mars24/help/landers.html"
+      },
+      {
+        "title": "NASA Science - Curiosity",
+        "url": "https://science.nasa.gov/mission/msl-curiosity/"
+      }
+    ]
+  },
+  {
+    "id": "insight",
+    "bodyId": "mars",
+    "name": {
+      "en": "InSight",
+      "ar": "إنسايت"
+    },
+    "shortDescription": {
+      "en": "Stationary lander that studied Mars' interior (seismology).",
+      "ar": "لاندر ثابت درس باطن المريخ (زلزالية)."
+    },
+    "status": "concluded",
+    "launchDate": "2018-05-05",
+    "arrivalDate": "2018-11-26",
+    "lastContactDate": "2022-12-15",
+    "endDate": "2022-12-21",
+    "coord": {
+      "lat": 4.5,
+      "lon": 135.62,
+      "source": "NASA GISS Mars24 lander list"
+    },
+    "specs": {
+      "Landing site": "Elysium Planitia"
+    },
+    "story": {
+      "en": "InSight landed on 26 November 2018 and detected marsquakes; dust on its solar panels ended the mission on 21 December 2022.",
+      "ar": "هبط إنسايت في 26 نوفمبر 2018 واكتشف زلازل المريخ؛ غبار على الألواح الشمسية أنهى المهمة في 21 ديسمبر 2022."
+    },
+    "achievements": {
+      "en": [
+        "First seismometer on Mars",
+        "Mars core size estimated"
+      ],
+      "ar": [
+        "أول مقياس زلازل على المريخ",
+        "تقدير حجم نواة المريخ"
+      ]
+    },
+    "sources": [
+      {
+        "title": "NASA GISS Mars24 Lander Missions",
+        "url": "https://www.giss.nasa.gov/tools/mars24/help/landers.html"
+      }
+    ]
+  },
+  {
+    "id": "perseverance",
+    "bodyId": "mars",
+    "name": {
+      "en": "Perseverance (Mars 2020)",
+      "ar": "بيرسيفيرانس (مارس 2020)"
+    },
+    "shortDescription": {
+      "en": "Rover caching samples in Jezero Crater; carried Ingenuity.",
+      "ar": "روفر يخزن عينات في فوهة جيزرو؛ حمل إنجينيويتي."
+    },
+    "status": "active",
+    "launchDate": "2020-07-30",
+    "arrivalDate": "2021-02-18",
+    "coord": {
+      "lat": 18.44,
+      "lon": 77.45,
+      "source": "NASA GISS Mars24 lander list"
+    },
+    "specs": {
+      "Landing site": "Jezero Crater (Octavia E. Butler Landing)"
+    },
+    "story": {
+      "en": "Perseverance landed on 18 February 2021 and is collecting samples for future return to Earth.",
+      "ar": "هبط بيرسيفيرانس في 18 فبراير 2021 ويجمع عينات لإعادتها إلى الأرض لاحقًا."
+    },
+    "achievements": {
+      "en": [
+        "First powered flight on Mars (Ingenuity)",
+        "Sample caching for Mars Sample Return"
+      ],
+      "ar": [
+        "أول طيران مُشَغَّل على المريخ (إنجينيويتي)",
+        "تخزين عينات لإعادة عينات المريخ"
+      ]
+    },
+    "sources": [
+      {
+        "title": "NASA GISS Mars24 Lander Missions",
+        "url": "https://www.giss.nasa.gov/tools/mars24/help/landers.html"
+      },
+      {
+        "title": "NASA Science - Mars 2020",
+        "url": "https://science.nasa.gov/mission/mars-2020-perseverance/"
+      }
+    ]
+  },
+  {
+    "id": "ingenuity",
+    "bodyId": "mars",
+    "name": {
+      "en": "Ingenuity Mars Helicopter",
+      "ar": "إنجينيويتي"
+    },
+    "shortDescription": {
+      "en": "First aircraft to fly on another planet; completed 72 flights.",
+      "ar": "أول طائرة تطير على كوكب آخر؛ أكملت 72 رحلة."
+    },
+    "status": "concluded",
+    "launchDate": "2020-07-30",
+    "arrivalDate": "2021-02-18",
+    "lastContactDate": "2024-01-18",
+    "endDate": "2024-01-25",
+    "specs": {
+      "Flights": "72",
+      "First flight": "19 April 2021",
+      "Last flight": "18 January 2024"
+    },
+    "story": {
+      "en": "Ingenuity flew for the first time on 19 April 2021 and last on 18 January 2024; mission ended 25 January 2024 after rotor damage.",
+      "ar": "طار إنجينيويتي لأول مرة في 19 أبريل 2021 وآخر مرة في 18 يناير 2024؛ انتهت المهمة في 25 يناير 2024 بعد تلف الدوار."
+    },
+    "achievements": {
+      "en": [
+        "First powered, controlled flight on another planet"
+      ],
+      "ar": [
+        "أول طيران مُشَغَّل ومُتحكم به على كوكب آخر"
+      ]
+    },
+    "sources": [
+      {
+        "title": "NASA JPL - Ingenuity mission ends",
+        "url": "https://www.jpl.nasa.gov/news/after-three-years-on-mars-nasas-ingenuity-helicopter-mission-ends/"
+      },
+      {
+        "title": "NASA Science - Ingenuity",
+        "url": "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/"
+      }
+    ]
+  },
+  {
+    "id": "zhurong",
+    "bodyId": "mars",
+    "name": {
+      "en": "Zhurong Rover",
+      "ar": "روفر جورونغ"
+    },
+    "shortDescription": {
+      "en": "Chinese rover of Tianwen-1; lost contact in 2022/2023.",
+      "ar": "روفر صيني من Tianwen-1؛ فقد الاتصال في 2022/2023."
+    },
+    "status": "lost-contact",
+    "launchDate": "2020-07-23",
+    "arrivalDate": "2021-05-14",
+    "lastContactDate": "2022-05-18",
+    "coord": {
+      "lat": 25.07,
+      "lon": 109.93,
+      "source": "NASA GISS Mars24 lander list"
+    },
+    "specs": {
+      "Landing site": "Southern Utopia Planitia",
+      "Travel": "~1.9 km"
+    },
+    "story": {
+      "en": "Zhurong touched down on 14 May 2021 and was placed in hibernation on 18 May 2022; communications were not re-established.",
+      "ar": "هبط جورونغ في 14 مايو 2021 ووضع في سبات في 18 مايو 2022؛ لم تُستعد الاتصالات."
+    },
+    "sources": [
+      {
+        "title": "NASA GISS Mars24 Lander Missions",
+        "url": "https://www.giss.nasa.gov/tools/mars24/help/landers.html"
+      }
+    ]
+  },
+  {
+    "id": "beagle-2",
+    "bodyId": "mars",
+    "name": {
+      "en": "Beagle 2",
+      "ar": "بيغل 2"
+    },
+    "shortDescription": {
+      "en": "British lander; landed but never communicated (found intact in 2015).",
+      "ar": "لاندر بريطاني؛ هبط لكن لم يتواصل (وُجد سليمًا 2015)."
+    },
+    "status": "lost-contact",
+    "launchDate": "2003-06-02",
+    "arrivalDate": "2003-12-25",
+    "coord": {
+      "lat": 11.53,
+      "lon": 90.43,
+      "source": "NASA GISS Mars24 lander list"
+    },
+    "specs": {
+      "Landing site": "Isidis Planitia"
+    },
+    "story": {
+      "en": "Beagle 2 landed on 25 December 2003 but never communicated; orbital imagery in 2015 showed it intact but not fully deployed.",
+      "ar": "هبط بيغل 2 في 25 ديسمبر 2003 لكن لم يتواصل؛ تصوير مداري 2015 أظهره سليمًا لكن غير مفتوح بالكامل."
+    },
+    "sources": [
+      {
+        "title": "NASA GISS Mars24 Lander Missions",
+        "url": "https://www.giss.nasa.gov/tools/mars24/help/landers.html"
+      }
+    ]
+  },
+  {
+    "id": "schiaparelli",
+    "bodyId": "mars",
+    "name": {
+      "en": "Schiaparelli EDM",
+      "ar": "سكيابارلي EDM"
+    },
+    "shortDescription": {
+      "en": "ESA demonstrator that crashed during descent on 19 Oct 2016.",
+      "ar": "أداة استعراض ESA تحطمت أثناء الهبوط في 19 أكتوبر 2016."
+    },
+    "status": "concluded",
+    "launchDate": "2016-03-14",
+    "arrivalDate": "2016-10-19",
+    "endDate": "2016-10-19",
+    "coord": {
+      "lat": -2.07,
+      "lon": 353.79,
+      "source": "NASA GISS Mars24 lander list"
+    },
+    "specs": {
+      "Landing site": "Meridiani Planum",
+      "Outcome": "Crashed on impact"
+    },
+    "story": {
+      "en": "The Schiaparelli demonstrator crashed on 19 October 2016 after premature parachute ejection.",
+      "ar": "تحطم أداة سكيابارلي الاستعراضية في 19 أكتوبر 2016 بعد خروج مبكر للمظلة."
+    },
+    "sources": [
+      {
+        "title": "NASA GISS Mars24 Lander Missions",
+        "url": "https://www.giss.nasa.gov/tools/mars24/help/landers.html"
+      }
+    ]
+  },
+  {
+    "id": "mars-polar-lander",
+    "bodyId": "mars",
+    "name": {
+      "en": "Mars Polar Lander",
+      "ar": "لاندر المريخ القطبي"
+    },
+    "shortDescription": {
+      "en": "NASA lander lost during descent in December 1999.",
+      "ar": "لاندر NASA فقد أثناء الهبوط في ديسمبر 1999."
+    },
+    "status": "lost-contact",
+    "launchDate": "1999-01-03",
+    "arrivalDate": "1999-12-03",
+    "coord": {
+      "lat": -76.1,
+      "lon": 164.7,
+      "source": "NASA GISS Mars24 lander list (195.3 deg W)"
+    },
+    "specs": {
+      "Landing site": "Planum Australe",
+      "Outcome": "Likely crashed on descent"
+    },
+    "story": {
+      "en": "Mars Polar Lander was lost during descent on 3 December 1999, likely due to premature engine shutdown.",
+      "ar": "فقد لاندر المريخ القطبي أثناء الهبوط في 3 ديسمبر 1999، على الأرجح بسبب إيقاف محرك مبكر."
+    },
+    "sources": [
+      {
+        "title": "NASA GISS Mars24 Lander Missions",
+        "url": "https://www.giss.nasa.gov/tools/mars24/help/landers.html"
+      }
+    ]
+  },
+  {
+    "id": "lunokhod-1",
+    "bodyId": "moon",
+    "name": {
+      "en": "Lunokhod 1",
+      "ar": "لونوخود 1"
+    },
+    "shortDescription": {
+      "en": "First rover on another world; delivered by Luna 17.",
+      "ar": "أول روفر على عالم آخر؛ أُرسل بواسطة لونا 17."
+    },
+    "status": "concluded",
+    "launchDate": "1970-11-10",
+    "arrivalDate": "1970-11-17",
+    "coord": {
+      "lat": 38.315,
+      "lon": -35.0081,
+      "source": "NSSDC - Luna 17 / Lunokhod 1"
+    },
+    "specs": {
+      "Landing site": "Mare Imbrium (Sea of Rains)"
+    },
+    "story": {
+      "en": "Lunokhod 1 landed on 17 November 1970, the first rover to drive on another world, and operated for about 10 months.",
+      "ar": "هبط لونوخود 1 في 17 نوفمبر 1970، أول روفر يتجول على عالم آخر، وعمل نحو 10 أشهر."
+    },
+    "achievements": {
+      "en": [
+        "First rover on another celestial body"
+      ],
+      "ar": [
+        "أول روفر على جرم سماوي آخر"
+      ]
+    },
+    "sources": [
+      {
+        "title": "NSSDC - Luna 17",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1970-095A"
+      },
+      {
+        "title": "NASA Moon Missions",
+        "url": "https://science.nasa.gov/moon/missions/"
+      }
+    ]
+  },
+  {
+    "id": "lunokhod-2",
+    "bodyId": "moon",
+    "name": {
+      "en": "Lunokhod 2",
+      "ar": "لونوخود 2"
+    },
+    "shortDescription": {
+      "en": "Soviet rover; drove ~39 km on the Moon.",
+      "ar": "روفر سوفييتي؛ قطع ~39 كم على القمر."
+    },
+    "status": "concluded",
+    "launchDate": "1973-01-08",
+    "arrivalDate": "1973-01-15",
+    "coord": {
+      "lat": 26.005,
+      "lon": 30.406,
+      "source": "LROC (NASA/GSFC/ASU)"
+    },
+    "specs": {
+      "Landing site": "Le Monnier crater",
+      "Travel": "~39 km"
+    },
+    "story": {
+      "en": "Lunokhod 2 landed on 15 January 1973 and drove about 39 km before contact was lost in June 1973.",
+      "ar": "هبط لونوخود 2 في 15 يناير 1973 وقطع نحو 39 كم قبل فقدان الاتصال في يونيو 1973."
+    },
+    "sources": [
+      {
+        "title": "LROC - Lunokhod 2 Revisited",
+        "url": "https://lroc.im-ldi.com/images/699"
+      },
+      {
+        "title": "NASA Moon Missions",
+        "url": "https://science.nasa.gov/moon/missions/"
+      }
+    ]
+  },
+  {
+    "id": "apollo-11-lm",
+    "bodyId": "moon",
+    "name": {
+      "en": "Apollo 11 Lunar Module (Eagle)",
+      "ar": "الوحدة القمرية أبولو 11 (إيغل)"
+    },
+    "shortDescription": {
+      "en": "First crewed landing on the Moon (Tranquility Base).",
+      "ar": "أول هبوط مأهول على القمر (قاعدة الهدوء)."
+    },
+    "status": "concluded",
+    "launchDate": "1969-07-16",
+    "arrivalDate": "1969-07-20",
+    "coord": {
+      "lat": 0.67416,
+      "lon": 23.47314,
+      "source": "NSSDC Apollo landing site coordinates"
+    },
+    "specs": {
+      "Landing site": "Tranquility Base (Mare Tranquillitatis)"
+    },
+    "story": {
+      "en": "Eagle landed on 20 July 1969; Neil Armstrong and Buzz Aldrin became the first humans on the Moon.",
+      "ar": "هبطت إيغل في 20 يوليو 1969؛ أصبح نيل أرمسترونغ وباز ألدرين أول بشريين على القمر."
+    },
+    "achievements": {
+      "en": [
+        "First humans on the Moon"
+      ],
+      "ar": [
+        "أول بشر على القمر"
+      ]
+    },
+    "sources": [
+      {
+        "title": "NSSDC - Apollo landing site coordinates",
+        "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/lunar_sites.html"
+      },
+      {
+        "title": "NASA - Apollo 11",
+        "url": "https://www.nasa.gov/mission/apollo-11/"
+      }
+    ]
+  },
+  {
+    "id": "apollo-15-lrv",
+    "bodyId": "moon",
+    "name": {
+      "en": "Apollo 15 Lunar Roving Vehicle",
+      "ar": "المركبة القمرية أبولو 15"
+    },
+    "shortDescription": {
+      "en": "First car driven on the Moon.",
+      "ar": "أول سيارة تُقاد على القمر."
+    },
+    "status": "concluded",
+    "launchDate": "1971-07-26",
+    "arrivalDate": "1971-07-30",
+    "coord": {
+      "lat": 26.13239,
+      "lon": 3.6333,
+      "source": "NSSDC Apollo landing site coordinates"
+    },
+    "specs": {
+      "Landing site": "Hadley Rille / Apennine Mountains"
+    },
+    "story": {
+      "en": "The first Lunar Roving Vehicle was deployed during Apollo 15 in July 1971.",
+      "ar": "نُشرت أول مركبة قمرية خلال أبولو 15 في يوليو 1971."
+    },
+    "sources": [
+      {
+        "title": "NSSDC - Apollo landing site coordinates",
+        "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/lunar_sites.html"
+      },
+      {
+        "title": "NASA - Apollo 15",
+        "url": "https://www.nasa.gov/mission/apollo-15/"
+      }
+    ]
+  },
+  {
+    "id": "apollo-17-lrv",
+    "bodyId": "moon",
+    "name": {
+      "en": "Apollo 17 Lunar Roving Vehicle",
+      "ar": "المركبة القمرية أبولو 17"
+    },
+    "shortDescription": {
+      "en": "Last crewed vehicle driven on the Moon (Dec 1972).",
+      "ar": "آخر مركبة مأهولة تُقاد على القمر (ديسمبر 1972)."
+    },
+    "status": "concluded",
+    "launchDate": "1972-12-07",
+    "arrivalDate": "1972-12-11",
+    "coord": {
+      "lat": 20.1911,
+      "lon": 30.7723,
+      "source": "NSSDC Apollo landing site coordinates"
+    },
+    "specs": {
+      "Landing site": "Taurus-Littrow valley"
+    },
+    "story": {
+      "en": "Apollo 17, the final Apollo mission, landed in December 1972; its rover was left on the Moon.",
+      "ar": "أبولو 17، المهمة أبولو الأخيرة، هبطت في ديسمبر 1972؛ وُتركت مركبتها على القمر."
+    },
+    "sources": [
+      {
+        "title": "NSSDC - Apollo landing site coordinates",
+        "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/lunar_sites.html"
+      },
+      {
+        "title": "NASA - Apollo 17",
+        "url": "https://www.nasa.gov/mission/apollo-17/"
+      }
+    ]
+  },
+  {
+    "id": "surveyor-1",
+    "bodyId": "moon",
+    "name": {
+      "en": "Surveyor 1",
+      "ar": "سيرفيور 1"
+    },
+    "shortDescription": {
+      "en": "First U.S. soft landing on the Moon.",
+      "ar": "أول هبوط ناعم أمريكي على القمر."
+    },
+    "status": "concluded",
+    "launchDate": "1966-05-30",
+    "arrivalDate": "1966-06-02",
+    "specs": {
+      "Landing site": "Oceanus Procellarum"
+    },
+    "story": {
+      "en": "Surveyor 1 landed on 2 June 1966, the first U.S. spacecraft to soft-land on the Moon.",
+      "ar": "هبط سيرفيور 1 في 2 يونيو 1966، أول مركبة أمريكية تهبط ناعمًا على القمر."
+    },
+    "sources": [
+      {
+        "title": "NASA Moon Missions",
+        "url": "https://science.nasa.gov/moon/missions/"
+      }
+    ]
+  },
+  {
+    "id": "surveyor-3",
+    "bodyId": "moon",
+    "name": {
+      "en": "Surveyor 3",
+      "ar": "سيرفيور 3"
+    },
+    "shortDescription": {
+      "en": "Lander later visited by Apollo 12 crew.",
+      "ar": "لاندر زاره لاحقًا طاقم أبولو 12."
+    },
+    "status": "concluded",
+    "launchDate": "1967-04-17",
+    "arrivalDate": "1967-04-20",
+    "specs": {
+      "Landing site": "Oceanus Procellarum"
+    },
+    "story": {
+      "en": "Surveyor 3 landed on 20 April 1967 and was visited by the Apollo 12 crew in November 1969.",
+      "ar": "هبط سيرفيور 3 في 20 أبريل 1967 وزاره طاقم أبولو 12 في نوفمبر 1969."
+    },
+    "sources": [
+      {
+        "title": "NASA Moon Missions",
+        "url": "https://science.nasa.gov/moon/missions/"
+      }
+    ]
+  },
+  {
+    "id": "surveyor-6",
+    "bodyId": "moon",
+    "name": {
+      "en": "Surveyor 6",
+      "ar": "سيرفيور 6"
+    },
+    "shortDescription": {
+      "en": "First spacecraft to lift off from the Moon's surface.",
+      "ar": "أول مركبة تقلع من سطح القمر."
+    },
+    "status": "concluded",
+    "launchDate": "1967-11-07",
+    "arrivalDate": "1967-11-10",
+    "coord": {
+      "lat": 0.473,
+      "lon": -1.427,
+      "source": "NASA Science - Surveyor 6"
+    },
+    "specs": {
+      "Landing site": "Sinus Medii"
+    },
+    "story": {
+      "en": "Surveyor 6 landed on 10 November 1967 in Sinus Medii and performed the first lunar hop.",
+      "ar": "هبط سيرفيور 6 في 10 نوفمبر 1967 في سينوس ميدي وأجرى أول قفزة قمرية."
+    },
+    "sources": [
+      {
+        "title": "NASA Science - Surveyor 6",
+        "url": "https://science.nasa.gov/mission/surveyor-6/"
+      },
+      {
+        "title": "NASA Moon Missions",
+        "url": "https://science.nasa.gov/moon/missions/"
+      }
+    ]
+  },
+  {
+    "id": "chang-e-3",
+    "bodyId": "moon",
+    "name": {
+      "en": "Chang'e 3 / Yutu",
+      "ar": "تشانغ 3 / يوتو"
+    },
+    "shortDescription": {
+      "en": "Chinese lander and first Chinese lunar rover.",
+      "ar": "لاندر صيني وأول روفر قمري صيني."
+    },
+    "status": "inactive",
+    "launchDate": "2013-12-06",
+    "arrivalDate": "2013-12-14",
+    "coord": {
+      "lat": 44.1215,
+      "lon": -19.512,
+      "source": "LROC (NASA/GSFC/ASU)"
+    },
+    "specs": {
+      "Landing site": "Mare Imbrium (44.12 N, 340.49 E)"
+    },
+    "story": {
+      "en": "Chang'e 3 landed on 14 December 2013 and deployed the Yutu rover.",
+      "ar": "هبط تشانغ 3 في 14 ديسمبر 2013 ونشر روفر يوتو."
+    },
+    "sources": [
+      {
+        "title": "LROC - Chang'e 3 landing site",
+        "url": "https://lroc.im-ldi.com/images/811"
+      },
+      {
+        "title": "NASA Moon Missions",
+        "url": "https://science.nasa.gov/moon/missions/"
+      }
+    ]
+  },
+  {
+    "id": "chang-e-4",
+    "bodyId": "moon",
+    "name": {
+      "en": "Chang'e 4 / Yutu-2",
+      "ar": "تشانغ 4 / يوتو-2"
+    },
+    "shortDescription": {
+      "en": "First landing on the lunar far side.",
+      "ar": "أول هبوط على الجانب البعيد من القمر."
+    },
+    "status": "active",
+    "launchDate": "2018-12-07",
+    "arrivalDate": "2019-01-03",
+    "specs": {
+      "Landing site": "Von Karman crater (far side)"
+    },
+    "story": {
+      "en": "Chang'e 4 achieved the first soft landing on the lunar far side on 3 January 2019.",
+      "ar": "حقق تشانغ 4 أول هبوط ناعم على الجانب البعيد من القمر في 3 يناير 2019."
+    },
+    "achievements": {
+      "en": [
+        "First far-side lunar landing"
+      ],
+      "ar": [
+        "أول هبوط على الجانب البعيد من القمر"
+      ]
+    },
+    "sources": [
+      {
+        "title": "NASA Moon Missions",
+        "url": "https://science.nasa.gov/moon/missions/"
+      }
+    ]
+  },
+  {
+    "id": "chandrayaan-3",
+    "bodyId": "moon",
+    "name": {
+      "en": "Chandrayaan-3 (Vikram/Pragyan)",
+      "ar": "تشاندرايان-3 (فيكرام/براجيان)"
+    },
+    "shortDescription": {
+      "en": "First soft landing near the lunar south pole.",
+      "ar": "أول هبوط ناعم قرب القطب الجنوبي للقمر."
+    },
+    "status": "concluded",
+    "launchDate": "2023-07-14",
+    "arrivalDate": "2023-08-23",
+    "coord": {
+      "lat": -69.3741,
+      "lon": 32.32,
+      "source": "NSSDC - Chandrayaan 3"
+    },
+    "specs": {
+      "Landing site": "Statio Shiv Shakti (south pole region)"
+    },
+    "story": {
+      "en": "Vikram landed on 23 August 2023 near the south pole; the mission concluded after the lunar night.",
+      "ar": "هبط فيكرام في 23 أغسطس 2023 قرب القطب الجنوبي؛ انتهت المهمة بعد الليل القمري."
+    },
+    "achievements": {
+      "en": [
+        "First soft landing near lunar south pole"
+      ],
+      "ar": [
+        "أول هبوط ناعم قرب القطب الجنوبي للقمر"
+      ]
+    },
+    "sources": [
+      {
+        "title": "NSSDC - Chandrayaan 3",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2023-098A"
+      },
+      {
+        "title": "NASA Moon Missions",
+        "url": "https://science.nasa.gov/moon/missions/"
+      }
+    ]
+  },
+  {
+    "id": "slim",
+    "bodyId": "moon",
+    "name": {
+      "en": "SLIM (JAXA)",
+      "ar": "SLIM (JAXA)"
+    },
+    "shortDescription": {
+      "en": "JAXA pinpoint lander; limited solar power after landing.",
+      "ar": "لاندر JAXA دقيق؛ طاقة شمسية محدودة بعد الهبوط."
+    },
+    "status": "concluded",
+    "launchDate": "2023-09-06",
+    "arrivalDate": "2024-01-19",
+    "endDate": "2024-08-26",
+    "coord": {
+      "lat": -13.316,
+      "lon": 25.251,
+      "source": "NASA LRO"
+    },
+    "specs": {
+      "Landing site": "Shioli crater"
+    },
+    "story": {
+      "en": "SLIM landed on 19 January 2024 with ~10 m precision; JAXA concluded lunar activities on 26 August 2024.",
+      "ar": "هبط SLIM في 19 يناير 2024 بدقة ~10 م؛ أعلنت JAXA انتهاء الأنشطة القمرية في 26 أغسطس 2024."
+    },
+    "sources": [
+      {
+        "title": "NASA LRO - SLIM spotted",
+        "url": "https://www.nasa.gov/missions/lro/nasas-lro-spots-japans-moon-lander/"
+      },
+      {
+        "title": "JAXA - SLIM conclusion",
+        "url": "https://global.jaxa.jp/press/2024/08/20240826-1_e.html"
+      }
+    ]
+  },
+  {
+    "id": "beresheet",
+    "bodyId": "moon",
+    "name": {
+      "en": "Beresheet",
+      "ar": "بيريشيت"
+    },
+    "shortDescription": {
+      "en": "Israeli private lander that crashed on 11 April 2019.",
+      "ar": "لاندر إسرائيلي خاص تحطم في 11 أبريل 2019."
+    },
+    "status": "concluded",
+    "launchDate": "2019-02-22",
+    "arrivalDate": "2019-04-11",
+    "endDate": "2019-04-11",
+    "specs": {
+      "Outcome": "Crashed during descent"
+    },
+    "story": {
+      "en": "Beresheet crashed during descent on 11 April 2019, the first lunar landing attempt by a private company.",
+      "ar": "تحطم بيريشيت أثناء الهبوط في 11 أبريل 2019، أول محاولة هبوط قمري من شركة خاصة."
+    },
+    "sources": [
+      {
+        "title": "NASA Moon Missions",
+        "url": "https://science.nasa.gov/moon/missions/"
+      }
+    ]
+  },
+  {
+    "id": "peregrine-m1",
+    "bodyId": "moon",
+    "name": {
+      "en": "Peregrine Mission 1",
+      "ar": "مهمة بيرغرن 1"
+    },
+    "shortDescription": {
+      "en": "First CLPS lander; failed to reach the Moon.",
+      "ar": "أول لاندر CLPS؛ فشل في الوصول إلى القمر."
+    },
+    "status": "concluded",
+    "launchDate": "2024-01-08",
+    "specs": {
+      "Outcome": "Unsuccessful; never reached lunar surface"
+    },
+    "story": {
+      "en": "Peregrine Mission 1 launched on 8 January 2024 but suffered a propellant leak and did not reach the Moon.",
+      "ar": "أُطلقت مهمة بيرغرن 1 في 8 يناير 2024 لكنها عانت تسرب وقود ولم تصل إلى القمر."
+    },
+    "sources": [
+      {
+        "title": "NASA Moon Missions",
+        "url": "https://science.nasa.gov/moon/missions/"
+      }
+    ]
+  },
+  {
+    "id": "im-1-odysseus",
+    "bodyId": "moon",
+    "name": {
+      "en": "IM-1 (Odysseus)",
+      "ar": "IM-1 (أوديسيوس)"
+    },
+    "shortDescription": {
+      "en": "First commercial soft lunar landing; tipped over on arrival.",
+      "ar": "أول هبوط قمري تجاري ناعم؛ انقلب عند الوصول."
+    },
+    "status": "concluded",
+    "launchDate": "2024-02-15",
+    "arrivalDate": "2024-02-22",
+    "specs": {
+      "Landing site": "Malapert A (south pole region)",
+      "Outcome": "Tipped over; limited communications"
+    },
+    "story": {
+      "en": "Odysseus landed on 22 February 2024, the first commercial soft lunar landing, but tipped over.",
+      "ar": "هبط أوديسيوس في 22 فبراير 2024، أول هبوط قمري تجاري ناعم، لكنه انقلب."
+    },
+    "sources": [
+      {
+        "title": "NASA Moon Missions",
+        "url": "https://science.nasa.gov/moon/missions/"
+      }
+    ]
+  },
+  {
+    "id": "lro",
+    "bodyId": "moon",
+    "name": {
+      "en": "Lunar Reconnaissance Orbiter (LRO)",
+      "ar": "المسبار القمري LRO"
+    },
+    "shortDescription": {
+      "en": "Active lunar orbiter mapping the Moon since 2009.",
+      "ar": "مسبار قمري نشط يرسم خرائط القمر منذ 2009."
+    },
+    "status": "active",
+    "launchDate": "2009-06-18",
+    "arrivalDate": "2009-06-23",
+    "specs": {
+      "Orbit": "Lunar polar orbit"
+    },
+    "story": {
+      "en": "LRO launched on 18 June 2009 and continues to map the lunar surface.",
+      "ar": "أُطلق LRO في 18 يونيو 2009 ولا يزال يرسم سطح القمر."
+    },
+    "sources": [
+      {
+        "title": "NASA Science - LRO",
+        "url": "https://science.nasa.gov/mission/lro/"
+      },
+      {
+        "title": "NASA Moon Missions",
+        "url": "https://science.nasa.gov/moon/missions/"
+      }
+    ]
+  },
+  {
+    "id": "voyager-1",
+    "bodyId": "other",
+    "name": {
+      "en": "Voyager 1",
+      "ar": "فوياجر 1"
+    },
+    "shortDescription": {
+      "en": "First spacecraft in interstellar space; visited Jupiter and Saturn.",
+      "ar": "أول مركبة في الفضاء بين النجوم؛ زارت المشتري وزحل."
+    },
+    "status": "active",
+    "launchDate": "1977-09-05",
+    "story": {
+      "en": "Voyager 1 launched on 5 September 1977, flew by Jupiter and Saturn, and entered interstellar space in 2012.",
+      "ar": "أُطلق فوياجر 1 في 5 سبتمبر 1977، مرّ بالمشتري وزحل، ودخل الفضاء بين النجوم في 2012."
+    },
+    "achievements": {
+      "en": [
+        "First spacecraft in interstellar space",
+        "Jupiter and Saturn flybys"
+      ],
+      "ar": [
+        "أول مركبة في الفضاء بين النجوم",
+        "تحليق بالمشتري وزحل"
+      ]
+    },
+    "sources": [
+      {
+        "title": "NASA Science - Voyager",
+        "url": "https://science.nasa.gov/mission/voyager/"
+      }
+    ]
+  },
+  {
+    "id": "voyager-2",
+    "bodyId": "other",
+    "name": {
+      "en": "Voyager 2",
+      "ar": "فوياجر 2"
+    },
+    "shortDescription": {
+      "en": "Only spacecraft to visit all four giant planets.",
+      "ar": "المركبة الوحيدة التي زارت الكواكب الأربعة العملاقة."
+    },
+    "status": "active",
+    "launchDate": "1977-08-20",
+    "story": {
+      "en": "Voyager 2 launched on 20 August 1977 and flew by Jupiter, Saturn, Uranus and Neptune.",
+      "ar": "أُطلق فوياجر 2 في 20 أغسطس 1977 ومرّ بالمشتري وزحل وأورانوس ونبتون."
+    },
+    "achievements": {
+      "en": [
+        "Only spacecraft to visit Uranus and Neptune",
+        "Entered interstellar space in 2018"
+      ],
+      "ar": [
+        "المركبة الوحيدة التي زارت أورانوس ونبتون",
+        "دخل الفضاء بين النجوم في 2018"
+      ]
+    },
+    "sources": [
+      {
+        "title": "NASA Science - Voyager",
+        "url": "https://science.nasa.gov/mission/voyager/"
+      }
+    ]
+  },
+  {
+    "id": "pioneer-10",
+    "bodyId": "other",
+    "name": {
+      "en": "Pioneer 10",
+      "ar": "بايونير 10"
+    },
+    "shortDescription": {
+      "en": "First spacecraft to traverse the asteroid belt and fly by Jupiter.",
+      "ar": "أول مركبة تعبر حزام الكويكبات وتمر بالمشتري."
+    },
+    "status": "concluded",
+    "launchDate": "1972-03-03",
+    "lastContactDate": "2003-01-23",
+    "story": {
+      "en": "Pioneer 10 launched on 3 March 1972; last contact was 23 January 2003.",
+      "ar": "أُطلق بايونير 10 في 3 مارس 1972؛ آخر اتصال في 23 يناير 2003."
+    },
+    "sources": [
+      {
+        "title": "NSSDC - Pioneer 10",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1972-012A"
+      }
+    ]
+  },
+  {
+    "id": "pioneer-11",
+    "bodyId": "other",
+    "name": {
+      "en": "Pioneer 11",
+      "ar": "بايونير 11"
+    },
+    "shortDescription": {
+      "en": "Flew by Jupiter and Saturn.",
+      "ar": "مرّ بالمشتري وزحل."
+    },
+    "status": "concluded",
+    "launchDate": "1973-04-05",
+    "lastContactDate": "1995-09-30",
+    "story": {
+      "en": "Pioneer 11 launched on 5 April 1973 and last contacted Earth on 30 September 1995.",
+      "ar": "أُطلق بايونير 11 في 5 أبريل 1973 وآخر اتصال بالأرض في 30 سبتمبر 1995."
+    },
+    "sources": [
+      {
+        "title": "NSSDC - Pioneer 11",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1973-019A"
+      }
+    ]
+  },
+  {
+    "id": "new-horizons",
+    "bodyId": "pluto",
+    "name": {
+      "en": "New Horizons",
+      "ar": "نيو هورايزونز"
+    },
+    "shortDescription": {
+      "en": "First flyby of Pluto and the Kuiper Belt.",
+      "ar": "أول تحليق ببلوتو وحزام كويبر."
+    },
+    "status": "active",
+    "launchDate": "2006-01-19",
+    "arrivalDate": "2015-07-14",
+    "specs": {
+      "Pluto flyby": "14 July 2015"
+    },
+    "story": {
+      "en": "New Horizons launched on 19 January 2006 and flew by Pluto on 14 July 2015.",
+      "ar": "أُطلقت نيو هورايزونز في 19 يناير 2006 وحلّقت ببلوتو في 14 يوليو 2015."
+    },
+    "achievements": {
+      "en": [
+        "First close-up images of Pluto"
+      ],
+      "ar": [
+        "أول صور مقربة لبلوتو"
+      ]
+    },
+    "sources": [
+      {
+        "title": "NSSDC - New Horizons",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2006-001A"
+      }
+    ]
+  },
+  {
+    "id": "hubble",
+    "bodyId": "other",
+    "name": {
+      "en": "Hubble Space Telescope",
+      "ar": "تلسكوب هابل الفضائي"
+    },
+    "shortDescription": {
+      "en": "Iconic space telescope in Earth orbit since 1990.",
+      "ar": "تلسكوب فضائي أيقوني في مدار الأرض منذ 1990."
+    },
+    "status": "active",
+    "launchDate": "1990-04-25",
+    "story": {
+      "en": "Hubble launched on 25 April 1990 and continues to observe the universe.",
+      "ar": "أُطلق هابل في 25 أبريل 1990 ولا يزال يراقب الكون."
+    },
+    "sources": [
+      {
+        "title": "NSSDC - Hubble Space Telescope",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1990-037B"
+      },
+      {
+        "title": "NASA Science - Hubble",
+        "url": "https://science.nasa.gov/mission/hubble/"
+      }
+    ]
+  },
+  {
+    "id": "jwst",
+    "bodyId": "other",
+    "name": {
+      "en": "James Webb Space Telescope",
+      "ar": "تلسكوب جيمس ويب الفضائي"
+    },
+    "shortDescription": {
+      "en": "Infrared observatory at L2; successor to Hubble.",
+      "ar": "مرصد الأشعة تحت الحمراء في L2؛ خليفة هابل."
+    },
+    "status": "active",
+    "launchDate": "2021-12-25",
+    "arrivalDate": "2022-01-24",
+    "specs": {
+      "Orbit": "Sun-Earth L2"
+    },
+    "story": {
+      "en": "JWST launched on 25 December 2021 and began science operations in 2022.",
+      "ar": "أُطلق JWST في 25 ديسمبر 2021 وبدأ العمليات العلمية في 2022."
+    },
+    "sources": [
+      {
+        "title": "NSSDC - James Webb Space Telescope",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2021-130A"
+      },
+      {
+        "title": "NASA Science - Webb",
+        "url": "https://science.nasa.gov/mission/webb/"
+      }
+    ]
+  },
+  {
+    "id": "cassini",
+    "bodyId": "saturn",
+    "name": {
+      "en": "Cassini",
+      "ar": "كاسيني"
+    },
+    "shortDescription": {
+      "en": "Saturn orbiter; ended with grand finale in 2017.",
+      "ar": "مسبار زحل؛ انتهى بـ النهاية الكبرى في 2017."
+    },
+    "status": "concluded",
+    "launchDate": "1997-10-15",
+    "arrivalDate": "2004-07-01",
+    "endDate": "2017-09-15",
+    "story": {
+      "en": "Cassini launched on 15 October 1997, orbited Saturn from 2004, and ended its mission on 15 September 2017.",
+      "ar": "أُطلق كاسيني في 15 أكتوبر 1997، ودار حول زحل من 2004، وانتهت مهمته في 15 سبتمبر 2017."
+    },
+    "achievements": {
+      "en": [
+        "Huygens delivered to Titan",
+        "Discovered Enceladus plumes"
+      ],
+      "ar": [
+        "تسليم هويجنز إلى تيتان",
+        "اكتشاف نوافير إنسلادوس"
+      ]
+    },
+    "sources": [
+      {
+        "title": "NSSDC - Cassini",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1997-061A"
+      },
+      {
+        "title": "NASA Science - Cassini",
+        "url": "https://science.nasa.gov/mission/cassini/"
+      }
+    ]
+  },
+  {
+    "id": "huygens",
+    "bodyId": "saturn",
+    "name": {
+      "en": "Huygens Probe",
+      "ar": "مسبار هويجنز"
+    },
+    "shortDescription": {
+      "en": "ESA probe that landed on Titan in 2005.",
+      "ar": "مسبار ESA هبط على تيتان في 2005."
+    },
+    "status": "concluded",
+    "launchDate": "1997-10-15",
+    "arrivalDate": "2005-01-14",
+    "endDate": "2005-01-14",
+    "specs": {
+      "Landing site": "Titan surface"
+    },
+    "story": {
+      "en": "Huygens descended to Titan on 14 January 2005, the first landing in the outer solar system.",
+      "ar": "هبط هويجنز على تيتان في 14 يناير 2005، أول هبوط في النظام الشمسي الخارجي."
+    },
+    "sources": [
+      {
+        "title": "NSSDC - Huygens",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1997-061C"
+      }
+    ]
+  },
+  {
+    "id": "galileo",
+    "bodyId": "jupiter",
+    "name": {
+      "en": "Galileo",
+      "ar": "غاليليو"
+    },
+    "shortDescription": {
+      "en": "Jupiter orbiter and probe; ended in 2003.",
+      "ar": "مسبار المشتري (زوند)؛ انتهى في 2003."
+    },
+    "status": "concluded",
+    "launchDate": "1989-10-18",
+    "arrivalDate": "1995-12-07",
+    "endDate": "2003-09-21",
+    "story": {
+      "en": "Galileo launched on 18 October 1989, orbited Jupiter from 1995, and was disposed of on 21 September 2003.",
+      "ar": "أُطلق غاليليو في 18 أكتوبر 1989، ودار حول المشتري من 1995، وأُزيل في 21 سبتمبر 2003."
+    },
+    "sources": [
+      {
+        "title": "NSSDC - Galileo",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1989-084B"
+      }
+    ]
+  },
+  {
+    "id": "juno",
+    "bodyId": "jupiter",
+    "name": {
+      "en": "Juno",
+      "ar": "جونو"
+    },
+    "shortDescription": {
+      "en": "Jupiter polar orbiter, active since 2016.",
+      "ar": "مسبار قطبي للمشتري، نشط منذ 2016."
+    },
+    "status": "active",
+    "launchDate": "2011-08-05",
+    "arrivalDate": "2016-07-04",
+    "story": {
+      "en": "Juno launched on 5 August 2011 and entered Jupiter orbit on 4 July 2016.",
+      "ar": "أُطلقت جونو في 5 أغسطس 2011 ودخلت مدار المشتري في 4 يوليو 2016."
+    },
+    "sources": [
+      {
+        "title": "NSSDC - Juno",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2011-040A"
+      }
+    ]
+  },
+  {
+    "id": "dawn",
+    "bodyId": "ceres",
+    "name": {
+      "en": "Dawn",
+      "ar": "داون"
+    },
+    "shortDescription": {
+      "en": "Orbited Vesta and Ceres; mission ended 2018.",
+      "ar": "دار حول فيستا وسيريس؛ انتهت المهمة 2018."
+    },
+    "status": "concluded",
+    "launchDate": "2007-09-27",
+    "arrivalDate": "2015-03-06",
+    "endDate": "2018-11-01",
+    "story": {
+      "en": "Dawn launched on 27 September 2007, orbited Vesta then Ceres, and ended on 1 November 2018.",
+      "ar": "أُطلقت داون في 27 سبتمبر 2007، ودارت حول فيستا ثم سيريس، وانتهت في 1 نوفمبر 2018."
+    },
+    "sources": [
+      {
+        "title": "NSSDC - Dawn",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2007-043A"
+      }
+    ]
+  },
+  {
+    "id": "osiris-rex",
+    "bodyId": "other",
+    "name": {
+      "en": "OSIRIS-REx",
+      "ar": "أوسيريس-ريكس"
+    },
+    "shortDescription": {
+      "en": "Sample return from asteroid Bennu (2023).",
+      "ar": "إعادة عينات من كويكب بینو (2023)."
+    },
+    "status": "concluded",
+    "launchDate": "2016-09-08",
+    "arrivalDate": "2018-12-03",
+    "endDate": "2023-09-24",
+    "story": {
+      "en": "OSIRIS-REx launched on 8 September 2016, reached Bennu in 2018, and returned samples to Earth on 24 September 2023.",
+      "ar": "أُطلق أوسيريس-ريكس في 8 سبتمبر 2016، ووصل إلى بینو في 2018، وأعاد عينات إلى الأرض في 24 سبتمبر 2023."
+    },
+    "sources": [
+      {
+        "title": "NSSDC - OSIRIS-REx",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2016-055A"
+      }
+    ]
+  },
+  {
+    "id": "rosetta",
+    "bodyId": "other",
+    "name": {
+      "en": "Rosetta",
+      "ar": "روزيتا"
+    },
+    "shortDescription": {
+      "en": "Comet orbiter; ended with Philae landing attempt.",
+      "ar": "مسبار مذنب؛ انتهى مع محاولة هبوط فيلای."
+    },
+    "status": "concluded",
+    "launchDate": "2004-03-02",
+    "arrivalDate": "2014-08-06",
+    "endDate": "2016-09-30",
+    "story": {
+      "en": "Rosetta launched on 2 March 2004, orbited comet 67P from 2014, and ended on 30 September 2016.",
+      "ar": "أُطلقت روزيتا في 2 مارس 2004، ودارت حول المذنب 67P من 2014، وانتهت في 30 سبتمبر 2016."
+    },
+    "sources": [
+      {
+        "title": "NSSDC - Rosetta",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2004-006A"
+      }
+    ]
+  },
+  {
+    "id": "philae",
+    "bodyId": "other",
+    "name": {
+      "en": "Philae Lander",
+      "ar": "لاندر فيلای"
+    },
+    "shortDescription": {
+      "en": "Lander on comet 67P; lost contact in 2015.",
+      "ar": "لاندر على مذنب 67P؛ فقد الاتصال في 2015."
+    },
+    "status": "lost-contact",
+    "launchDate": "2004-03-02",
+    "arrivalDate": "2014-11-12",
+    "lastContactDate": "2015-07-09",
+    "specs": {
+      "Landing site": "Comet 67P/Churyumov-Gerasimenko"
+    },
+    "story": {
+      "en": "Philae landed on comet 67P on 12 November 2014 and last contacted on 9 July 2015.",
+      "ar": "هبط فيلای على مذنب 67P في 12 نوفمبر 2014 وآخر اتصال في 9 يوليو 2015."
+    },
+    "sources": [
+      {
+        "title": "NSSDC - Rosetta",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2004-006A"
+      }
+    ]
+  },
+  {
+    "id": "kepler",
+    "bodyId": "other",
+    "name": {
+      "en": "Kepler Space Telescope",
+      "ar": "تلسكوب كبلر الفضائي"
+    },
+    "shortDescription": {
+      "en": "Exoplanet hunter; mission ended 2018.",
+      "ar": "صياد الكواكب خارجية؛ انتهت المهمة 2018."
+    },
+    "status": "concluded",
+    "launchDate": "2009-03-07",
+    "endDate": "2018-10-30",
+    "story": {
+      "en": "Kepler launched on 7 March 2009 and was retired on 30 October 2018.",
+      "ar": "أُطلق كبلر في 7 مارس 2009 وتقاعد في 30 أكتوبر 2018."
+    },
+    "sources": [
+      {
+        "title": "NSSDC - Kepler",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2009-011A"
+      }
+    ]
+  },
+  {
+    "id": "spitzer",
+    "bodyId": "other",
+    "name": {
+      "en": "Spitzer Space Telescope",
+      "ar": "تلسكوب سبيتزر الفضائي"
+    },
+    "shortDescription": {
+      "en": "Infrared observatory; decommissioned 2020.",
+      "ar": "مرصد الأشعة تحت الحمراء؛ أُلغي في 2020."
+    },
+    "status": "concluded",
+    "launchDate": "2003-08-25",
+    "endDate": "2020-01-30",
+    "story": {
+      "en": "Spitzer launched on 25 August 2003 and was decommissioned on 30 January 2020.",
+      "ar": "أُطلق سبيتزر في 25 أغسطس 2003 وأُلغي في 30 يناير 2020."
+    },
+    "sources": [
+      {
+        "title": "NASA Science - Spitzer",
+        "url": "https://science.nasa.gov/mission/spitzer/"
+      }
+    ]
+  },
+  {
+    "id": "chandra",
+    "bodyId": "other",
+    "name": {
+      "en": "Chandra X-ray Observatory",
+      "ar": "مرصد تشاندرا للأشعة السينية"
+    },
+    "shortDescription": {
+      "en": "X-ray observatory in Earth orbit since 1999.",
+      "ar": "مرصد الأشعة السينية في مدار الأرض منذ 1999."
+    },
+    "status": "active",
+    "launchDate": "1999-07-23",
+    "story": {
+      "en": "Chandra launched on 23 July 1999 and continues to observe the X-ray universe.",
+      "ar": "أُطلق تشاندرا في 23 يوليو 1999 ولا يزال يراقب كون الأشعة السينية."
+    },
+    "sources": [
+      {
+        "title": "NSSDC - Chandra",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1999-040B"
+      }
+    ]
+  },
+  {
+    "id": "parker-solar-probe",
+    "bodyId": "other",
+    "name": {
+      "en": "Parker Solar Probe",
+      "ar": "مسبار باركر الشمسي"
+    },
+    "shortDescription": {
+      "en": "Closest spacecraft to the Sun.",
+      "ar": "أقرب مركبة إلى الشمس."
+    },
+    "status": "active",
+    "launchDate": "2018-08-12",
+    "story": {
+      "en": "Parker Solar Probe launched on 12 August 2018 to study the Sun's corona.",
+      "ar": "أُطلق مسبار باركر الشمسي في 12 أغسطس 2018 لدراسة هالة الشمس."
+    },
+    "sources": [
+      {
+        "title": "NSSDC - Parker Solar Probe",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2018-065A"
+      }
+    ]
+  },
+  {
+    "id": "lucy",
+    "bodyId": "other",
+    "name": {
+      "en": "Lucy",
+      "ar": "لوسي"
+    },
+    "shortDescription": {
+      "en": "Mission to Jupiter's Trojan asteroids.",
+      "ar": "مهمة إلى كويكبات مشتري التروجان."
+    },
+    "status": "active",
+    "launchDate": "2021-10-16",
+    "story": {
+      "en": "Lucy launched on 16 October 2021 to study Trojan asteroids.",
+      "ar": "أُطلقت لوسي في 16 أكتوبر 2021 لدراسة كويكبات التروجان."
+    },
+    "sources": [
+      {
+        "title": "NSSDC - Lucy",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2021-093A"
+      }
+    ]
+  },
+  {
+    "id": "psyche",
+    "bodyId": "other",
+    "name": {
+      "en": "Psyche",
+      "ar": "سايكي"
+    },
+    "shortDescription": {
+      "en": "Mission to metal-rich asteroid 16 Psyche.",
+      "ar": "مهمة إلى كويكب 16 Psyche الغني بالمعادن."
+    },
+    "status": "active",
+    "launchDate": "2023-10-13",
+    "story": {
+      "en": "Psyche launched on 13 October 2023 toward asteroid 16 Psyche.",
+      "ar": "أُطلقت سايكي في 13 أكتوبر 2023 باتجاه كويكب 16 Psyche."
+    },
+    "sources": [
+      {
+        "title": "NSSDC - Psyche",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2023-157A"
+      }
+    ]
+  },
+  {
+    "id": "ulysses",
+    "bodyId": "other",
+    "name": {
+      "en": "Ulysses",
+      "ar": "أوليس"
+    },
+    "shortDescription": {
+      "en": "Solar polar orbiter; mission ended 2009.",
+      "ar": "مسبار قطبي شمسي؛ انتهت المهمة 2009."
+    },
+    "status": "concluded",
+    "launchDate": "1990-10-06",
+    "endDate": "2009-06-30",
+    "story": {
+      "en": "Ulysses launched on 6 October 1990 and ended on 30 June 2009.",
+      "ar": "أُطلق أوليس في 6 أكتوبر 1990 وانتهى في 30 يونيو 2009."
+    },
+    "sources": [
+      {
+        "title": "NSSDC - Ulysses",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1990-090B"
+      }
+    ]
+  },
+  {
+    "id": "hayabusa2",
+    "bodyId": "other",
+    "name": {
+      "en": "Hayabusa2",
+      "ar": "هايابوسا 2"
+    },
+    "shortDescription": {
+      "en": "JAXA sample return from asteroid Ryugu.",
+      "ar": "إعادة عينات JAXA من كويكب ريوغو."
+    },
+    "status": "concluded",
+    "launchDate": "2014-12-03",
+    "arrivalDate": "2018-06-27",
+    "endDate": "2020-12-05",
+    "story": {
+      "en": "Hayabusa2 launched on 3 December 2014, reached Ryugu in 2018, and returned samples on 5 December 2020.",
+      "ar": "أُطلقت هايابوسا 2 في 3 ديسمبر 2014، ووصلت إلى ريوغو في 2018، وأعادت عينات في 5 ديسمبر 2020."
+    },
+    "sources": [
+      {
+        "title": "NSSDC - Hayabusa 2",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2014-076A"
+      }
+    ]
+  },
+  {
+    "id": "dart",
+    "bodyId": "other",
+    "name": {
+      "en": "DART",
+      "ar": "DART"
+    },
+    "shortDescription": {
+      "en": "Kinetic impactor that deflected asteroid Dimorphos (2022).",
+      "ar": "مُصادم حركي حرف كويكب ديمورفوس (2022)."
+    },
+    "status": "concluded",
+    "launchDate": "2021-11-24",
+    "endDate": "2022-09-26",
+    "story": {
+      "en": "DART launched on 24 November 2021 and impacted Dimorphos on 26 September 2022.",
+      "ar": "أُطلق DART في 24 نوفمبر 2021 واصطدم بديمورفوس في 26 سبتمبر 2022."
+    },
+    "achievements": {
+      "en": [
+        "First planetary defense test"
+      ],
+      "ar": [
+        "أول اختبار دفاع كوكبي"
+      ]
+    },
+    "sources": [
+      {
+        "title": "NSSDC - DART",
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2021-110A"
+      }
+    ]
+  }
+]

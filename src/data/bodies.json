@@ -1,11 +1,134 @@
 [
-  { "id": "mercury", "name": { "en": "Mercury", "ar": "عطارد" }, "type": "planet", "orbitOrder": 0, "accent": "#B7B8B9" },
-  { "id": "venus", "name": { "en": "Venus", "ar": "الزهرة" }, "type": "planet", "orbitOrder": 1, "accent": "#E8CDA2" },
-  { "id": "earth", "name": { "en": "Earth", "ar": "الأرض" }, "type": "planet", "orbitOrder": 2, "accent": "#4FA3E3" },
-  { "id": "mars", "name": { "en": "Mars", "ar": "المريخ" }, "type": "planet", "orbitOrder": 3, "accent": "#C76A45" },
-  { "id": "jupiter", "name": { "en": "Jupiter", "ar": "المشتري" }, "type": "planet", "orbitOrder": 4, "accent": "#D8A47F" },
-  { "id": "saturn", "name": { "en": "Saturn", "ar": "زحل" }, "type": "planet", "orbitOrder": 5, "accent": "#E3D3A2" },
-  { "id": "uranus", "name": { "en": "Uranus", "ar": "أورانوس" }, "type": "planet", "orbitOrder": 6, "accent": "#9FE3E3" },
-  { "id": "neptune", "name": { "en": "Neptune", "ar": "نبتون" }, "type": "planet", "orbitOrder": 7, "accent": "#4B70DD" },
-  { "id": "moon", "name": { "en": "Moon", "ar": "القمر" }, "type": "moon", "orbitOrder": 8, "accent": "#AAB6C4" }
+  {
+    "id": "mercury",
+    "name": { "en": "Mercury", "ar": "عطارد" },
+    "type": "planet",
+    "orbitOrder": 0,
+    "accent": "#B7B8B9",
+    "description": {
+      "en": "The smallest planet and closest to the Sun; a rocky, cratered world with almost no atmosphere.",
+      "ar": "أصغر كواكب المجموعة الشمسية وأقربها إلى الشمس؛ عالم صخري مُحَفَّر بالفوهات، يكاد يخلو من الغلاف الجوي."
+    }
+  },
+  {
+    "id": "venus",
+    "name": { "en": "Venus", "ar": "الزهرة" },
+    "type": "planet",
+    "orbitOrder": 1,
+    "accent": "#E8CDA2",
+    "description": {
+      "en": "Earth's near-twin in size, veiled by a thick CO2 atmosphere and the hottest surface of any planet.",
+      "ar": "شبيه الأضواء في الحجم، يختفي تحت غلاف جوي كثيف من CO2، وأحرّ أسطح الكواكب."
+    }
+  },
+  {
+    "id": "earth",
+    "name": { "en": "Earth", "ar": "الأرض" },
+    "type": "planet",
+    "orbitOrder": 2,
+    "accent": "#4FA3E3",
+    "description": {
+      "en": "Our home planet: an ocean world with a nitrogen-oxygen atmosphere and life.",
+      "ar": "كوكبنا: عالم محيطات، غلافه الجوي نيتروجين وأكسجين، وفيه حياة."
+    }
+  },
+  {
+    "id": "mars",
+    "name": { "en": "Mars", "ar": "المريخ" },
+    "type": "planet",
+    "orbitOrder": 3,
+    "accent": "#C76A45",
+    "description": {
+      "en": "The Red Planet: cold, dusty, with the tallest volcano and largest canyon in the solar system.",
+      "ar": "الكوكب الأحمر: بارد وغباري، فيه أطول بركان وأكبر وادٍ في المجموعة الشمسية."
+    }
+  },
+  {
+    "id": "jupiter",
+    "name": { "en": "Jupiter", "ar": "المشتري" },
+    "type": "planet",
+    "orbitOrder": 4,
+    "accent": "#D8A47F",
+    "description": {
+      "en": "The largest planet: a gas giant with the Great Red Spot storm and dozens of moons.",
+      "ar": "أكبر الكواكب: عملاق غازي، فيه البقعة الحمراء الكبيرة وعشرات الأقمار."
+    }
+  },
+  {
+    "id": "saturn",
+    "name": { "en": "Saturn", "ar": "زحل" },
+    "type": "planet",
+    "orbitOrder": 5,
+    "accent": "#E3D3A2",
+    "description": {
+      "en": "A gas giant famed for its bright ring system of ice and rock.",
+      "ar": "عملاق غازي يشتهر بحلقاته اللامعة من الجليد والصخر."
+    }
+  },
+  {
+    "id": "uranus",
+    "name": { "en": "Uranus", "ar": "أورانوس" },
+    "type": "planet",
+    "orbitOrder": 6,
+    "accent": "#9FE3E3",
+    "description": {
+      "en": "An ice giant that rotates on its side, with a faint ring system.",
+      "ar": "عملاق جليدي يدور على جانبه، وله نظام حلقات خافت."
+    }
+  },
+  {
+    "id": "neptune",
+    "name": { "en": "Neptune", "ar": "نبتون" },
+    "type": "planet",
+    "orbitOrder": 7,
+    "accent": "#4B70DD",
+    "description": {
+      "en": "The windiest planet: a deep-blue ice giant at the solar system's edge.",
+      "ar": "أرياح الكواكب: عملاق جليدي أزرق داكن على حافة المجموعة الشمسية."
+    }
+  },
+  {
+    "id": "moon",
+    "name": { "en": "Moon", "ar": "القمر" },
+    "type": "moon",
+    "orbitOrder": 8,
+    "accent": "#AAB6C4",
+    "description": {
+      "en": "Earth's only natural satellite, scarred by craters and maria; the only body humans have walked on.",
+      "ar": "قمر الأرض الوحيد، مُحَفَّر بالفوهات والبحار؛ الجرم الوحيد الذي مشى عليه البشر."
+    }
+  },
+  {
+    "id": "pluto",
+    "name": { "en": "Pluto", "ar": "بلوتو" },
+    "type": "other",
+    "orbitOrder": 9,
+    "accent": "#9B8FC7",
+    "description": {
+      "en": "A dwarf planet in the Kuiper Belt; visited by New Horizons in 2015.",
+      "ar": "كوكب قزم في حزام كويبر؛ زارته نيو هورايزونز عام 2015."
+    }
+  },
+  {
+    "id": "ceres",
+    "name": { "en": "Ceres", "ar": "سيريس" },
+    "type": "asteroid",
+    "orbitOrder": 10,
+    "accent": "#8B8B7A",
+    "description": {
+      "en": "The largest object in the asteroid belt and a dwarf planet; explored by Dawn.",
+      "ar": "أكبر جرم في حزام الكويكبات وكوكب قزم؛ استكشفته داون."
+    }
+  },
+  {
+    "id": "other",
+    "name": { "en": "Deep Space / Other", "ar": "الفضاء العميق / أخرى" },
+    "type": "other",
+    "orbitOrder": 11,
+    "accent": "#8275FF",
+    "description": {
+      "en": "Container for deep-space and multi-destination spacecraft not tied to a single body.",
+      "ar": "حاوية للمركبات الفضائية في الفضاء العميق وتلك متعددة الوجهات غير المرتبطة بجرم واحد."
+    }
+  }
 ]
