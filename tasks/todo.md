@@ -22,10 +22,10 @@ Tasks tracked here (default checklist). Plan document: `tasks/plan.md`.
 - [ ] Types validate sample data
 
 ## Phase 2: Solar System landing
-- [ ] Task 7: Solar system 3D scene (slow orbit, starfield, blur backdrop)
-- [ ] Task 8: Horizontal drag selection (carousel depth, name, Explore!/Timeline)
-- [ ] Task 9: Keyboard (←/→) + touch (swipe) + mouse drag unification
-- [ ] Task 10: Explore! transition (body → Planet Explorer) visual handoff
+- [x] Task 7: Solar system 3D scene (slow orbit, starfield, blur backdrop)
+- [x] Task 8: Horizontal drag selection (carousel depth, name, Explore!/Timeline)
+- [x] Task 9: Keyboard (←/→) + touch (swipe) + mouse drag unification
+- [x] Task 10: Explore! transition (body → Planet Explorer) visual handoff
 
 ## Checkpoint: Solar System
 - [ ] Navigate all bodies via mouse/keyboard/touch

@@ -1,0 +1,11 @@
+[
+  { "id": "mercury", "name": { "en": "Mercury", "ar": "عطارد" }, "type": "planet", "orbitOrder": 0, "accent": "#B7B8B9" },
+  { "id": "venus", "name": { "en": "Venus", "ar": "الزهرة" }, "type": "planet", "orbitOrder": 1, "accent": "#E8CDA2" },
+  { "id": "earth", "name": { "en": "Earth", "ar": "الأرض" }, "type": "planet", "orbitOrder": 2, "accent": "#4FA3E3" },
+  { "id": "mars", "name": { "en": "Mars", "ar": "المريخ" }, "type": "planet", "orbitOrder": 3, "accent": "#C76A45" },
+  { "id": "jupiter", "name": { "en": "Jupiter", "ar": "المشتري" }, "type": "planet", "orbitOrder": 4, "accent": "#D8A47F" },
+  { "id": "saturn", "name": { "en": "Saturn", "ar": "زحل" }, "type": "planet", "orbitOrder": 5, "accent": "#E3D3A2" },
+  { "id": "uranus", "name": { "en": "Uranus", "ar": "أورانوس" }, "type": "planet", "orbitOrder": 6, "accent": "#9FE3E3" },
+  { "id": "neptune", "name": { "en": "Neptune", "ar": "نبتون" }, "type": "planet", "orbitOrder": 7, "accent": "#4B70DD" },
+  { "id": "moon", "name": { "en": "Moon", "ar": "القمر" }, "type": "moon", "orbitOrder": 8, "accent": "#AAB6C4" }
+]

@@ -1,0 +1,136 @@
+// src/pages/SolarSystem.tsx
+import { useEffect, useRef, useState, lazy, Suspense } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { useAppStore } from '../store/useAppStore';
+import type { Body } from '../types';
+import bodiesData from '../data/bodies.json';
+import '../styles/solar.css';
+
+const SolarCanvas = lazy(() => import('../components/solar/SolarCanvas'));
+
+const bodies = (bodiesData as Body[]).slice().sort((a, b) => a.orbitOrder - b.orbitOrder);
+
+export default function SolarSystem() {
+  const { i18n } = useTranslation();
+  const navigate = useNavigate();
+  const locale = useAppStore((s) => s.locale);
+  const setSelectedBody = useAppStore((s) => s.setSelectedBody);
+  const storedSelected = useAppStore((s) => s.selectedBodyId);
+
+  const [index, setIndex] = useState<number>(() => {
+    if (storedSelected) {
+      const i = bodies.findIndex((b) => b.id === storedSelected);
+      if (i >= 0) return i;
+    }
+    return 0;
+  });
+
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setReducedMotion(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setReducedMotion(e.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
+
+  useEffect(() => {
+    const id = bodies[index]?.id ?? null;
+    setSelectedBody(id);
+  }, [index, setSelectedBody]);
+
+  const go = (delta: number) => {
+    setIndex((i) => Math.max(0, Math.min(bodies.length - 1, i + delta)));
+  };
+
+  // keyboard
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        go(-1);
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        go(1);
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
+
+  // drag / swipe
+  const dragStart = useRef<number | null>(null);
+  const touchStart = useRef<number | null>(null);
+  const THRESHOLD = 40;
+
+  const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    dragStart.current = e.clientX;
+  };
+  const onPointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (dragStart.current === null) return;
+    const dx = e.clientX - dragStart.current;
+    if (Math.abs(dx) > THRESHOLD) {
+      if (dx < 0) go(1);
+      else go(-1);
+    }
+    dragStart.current = null;
+  };
+  const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchStart.current = e.touches[0]?.clientX ?? null;
+  };
+  const onTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (touchStart.current === null) return;
+    const dx = (e.changedTouches[0]?.clientX ?? touchStart.current) - touchStart.current;
+    if (Math.abs(dx) > THRESHOLD) {
+      if (dx < 0) go(1);
+      else go(-1);
+    }
+    touchStart.current = null;
+  };
+
+  const selected = bodies[index];
+  const lang = (locale || i18n.language || 'en').startsWith('ar') ? 'ar' : 'en';
+
+  return (
+    <div className="solar-page">
+      <div className="solar-backdrop" />
+      <div
+        className="solar-stage"
+        onPointerDown={onPointerDown}
+        onPointerUp={onPointerUp}
+        onPointerCancel={() => {
+          dragStart.current = null;
+        }}
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
+      >
+        <Suspense fallback={<div className="solar-loading">Loading 3D scene…</div>}>
+          <SolarCanvas bodies={bodies} selectedIndex={index} reducedMotion={reducedMotion} />
+        </Suspense>
+      </div>
+      <div className="solar-hint">Drag, swipe, or use ← →</div>
+      <div className="solar-ui">
+        <h1 className="solar-name">{selected ? selected.name[lang] : ''}</h1>
+        <div className="solar-actions">
+          <button
+            type="button"
+            className="solar-btn solar-btn--primary"
+            onClick={() => selected && navigate(`/planet/${selected.id}`)}
+            disabled={!selected}
+          >
+            Explore!
+          </button>
+          <button
+            type="button"
+            className="solar-btn"
+            onClick={() => navigate('/timeline')}
+          >
+            View Timeline
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}

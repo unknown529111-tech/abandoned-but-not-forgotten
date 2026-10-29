@@ -1,0 +1,113 @@
+/* Solar System page — Abandoned but not Forgotten */
+.solar-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.solar-stage {
+  position: absolute;
+  inset: 0;
+  cursor: grab;
+  touch-action: pan-y;
+}
+.solar-stage:active { cursor: grabbing; }
+
+.solar-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.solar-loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.solar-ui {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 24px 20px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.solar-name {
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+  margin: 0;
+}
+
+.solar-actions {
+  display: flex;
+  gap: 12px;
+  pointer-events: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.solar-btn {
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 15px;
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease-standard), border-color var(--dur-fast) var(--ease-standard), transform var(--dur-fast) var(--ease-standard);
+}
+.solar-btn:hover {
+  border-color: var(--accent);
+  background: var(--bg-secondary);
+}
+.solar-btn--primary {
+  background: var(--accent);
+  color: var(--space-black);
+  border-color: var(--accent);
+  font-weight: 600;
+}
+.solar-btn--primary:hover {
+  background: var(--accent-glow);
+  border-color: var(--accent-glow);
+}
+
+.solar-hint {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-muted);
+  font-size: 13px;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.solar-backdrop {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(11,20,36,0.4) 0%, rgba(5,8,17,1) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .solar-btn { transition: none; }
+}
