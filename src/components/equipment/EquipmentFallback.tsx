@@ -22,7 +22,7 @@ export default function EquipmentFallback({ body, imageUrl }: Props) {
       const accent = body?.accent ?? '#42BFFF';
       const grad = ctx.createRadialGradient(256, 256, 40, 256, 256, 256);
       grad.addColorStop(0, accent);
-      grad.addColorStop(1, '#050811');
+      grad.addColorStop(1, '#000000');
       ctx.fillStyle = grad;
       ctx.fillRect(0, 0, 512, 512);
     }

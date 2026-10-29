@@ -36,8 +36,8 @@ export default function SolarCanvas({ bodies, selectedIndex, reducedMotion }: Pr
         dpr={dpr}
         gl={{ antialias: true, alpha: true }}
       >
-        <color attach="background" args={['#050811']} />
-        <fog attach="fog" args={['#050811', 9, 28]} />
+        <color attach="background" args={['#000000']} />
+        <fog attach="fog" args={['#000000', 9, 28]} />
         <ambientLight intensity={0.35} />
         <directionalLight position={[6, 6, 6]} intensity={1.1} />
         <pointLight position={[-6, -4, -4]} intensity={0.4} color="#42BFFF" />

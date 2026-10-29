@@ -91,7 +91,7 @@ export default function PlanetCanvas({
           dpr={[1, 2]}
           gl={{ antialias: true, alpha: true }}
         >
-          <color attach="background" args={['#050811']} />
+          <color attach="background" args={['#000000']} />
           <ambientLight intensity={0.5} />
           <directionalLight position={[6, 6, 6]} intensity={1.0} />
           <pointLight position={[-6, -4, -4]} intensity={0.35} color="#42BFFF" />

@@ -3,13 +3,15 @@ import { useEffect, useRef, useState, lazy, Suspense } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAppStore } from '../store/useAppStore';
-import type { Body } from '../types';
+import type { Body, Equipment } from '../types';
 import bodiesData from '../data/bodies.json';
+import equipmentData from '../data/equipment.json';
 import '../styles/solar.css';
 
 const SolarCanvas = lazy(() => import('../components/solar/SolarCanvas'));
 
 const bodies = (bodiesData as Body[]).slice().sort((a, b) => a.orbitOrder - b.orbitOrder);
+const allEquipment = equipmentData as Equipment[];
 
 export default function SolarSystem() {
   const { i18n } = useTranslation();
@@ -49,8 +51,8 @@ export default function SolarSystem() {
   const go = (delta: number) => {
     setIndex((i) => Math.max(0, Math.min(bodies.length - 1, i + delta)));
   };
+  const goTo = (i: number) => setIndex(Math.max(0, Math.min(bodies.length - 1, i)));
 
-  // keyboard
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'ArrowLeft') {
@@ -65,7 +67,6 @@ export default function SolarSystem() {
     return () => window.removeEventListener('keydown', onKey);
   }, []);
 
-  // drag / swipe
   const dragStart = useRef<number | null>(null);
   const touchStart = useRef<number | null>(null);
   const THRESHOLD = 40;
@@ -98,9 +99,22 @@ export default function SolarSystem() {
   const selected = bodies[index];
   const lang = (locale || i18n.language || 'en').startsWith('ar') ? 'ar' : 'en';
 
+  const eqCount = selected ? allEquipment.filter((e) => e.bodyId === selected.id).length : 0;
+  const withLaunch = selected
+    ? allEquipment.filter((e) => e.bodyId === selected.id && e.launchDate).length
+    : 0;
+
   return (
     <div className="solar-page motion-page-enter" id="main">
-      <div className="solar-backdrop" />
+      <div className="solar-hero">
+        <h1 className="solar-hero__title">
+          Abandoned <span className="accent">but not forgotten</span>
+        </h1>
+        <p className="solar-hero__tagline">
+          // interactive space exploration archive — documented equipment only
+        </p>
+      </div>
+
       <div
         className="solar-stage"
         role="region"
@@ -122,8 +136,25 @@ export default function SolarSystem() {
         )}
       </div>
       <div className="solar-hint">Drag, swipe, or use ← →</div>
+
       <div className="solar-ui">
-        <h1 className="solar-name" aria-live="polite">{selected ? selected.name[lang] : ''}</h1>
+        <h2 className="solar-name" aria-live="polite">{selected ? selected.name[lang] : ''}</h2>
+        {selected && (
+          <div className="solar-stats" aria-label="Selected body stats">
+            <div>
+              <span className="solar-stats__label">Type</span>
+              <span className="solar-stats__value">{selected.type}</span>
+            </div>
+            <div>
+              <span className="solar-stats__label">Equipment</span>
+              <span className="solar-stats__value">{eqCount}</span>
+            </div>
+            <div>
+              <span className="solar-stats__label">Documented</span>
+              <span className="solar-stats__value">{withLaunch}</span>
+            </div>
+          </div>
+        )}
         <div className="solar-actions">
           <button
             type="button"
@@ -142,6 +173,19 @@ export default function SolarSystem() {
           </button>
         </div>
       </div>
+
+      <nav className="solar-strip" aria-label="Quick navigation">
+        {bodies.map((b, i) => (
+          <button
+            key={b.id}
+            type="button"
+            className={`solar-strip__btn ${i === index ? 'solar-strip__btn--active' : ''}`}
+            onClick={() => goTo(i)}
+          >
+            {b.name.en}
+          </button>
+        ))}
+      </nav>
     </div>
   );
 }

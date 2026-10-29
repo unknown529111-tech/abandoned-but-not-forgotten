@@ -1,4 +1,4 @@
-/* Timeline page — Abandoned but not Forgotten */
+/* Timeline page — redesigned NASA Eyes + SpaceX DNA */
 .timeline-page {
   position: relative;
   width: 100%;
@@ -18,7 +18,7 @@
   align-items: center;
   gap: 16px;
   padding: 14px 20px;
-  background: rgba(5, 8, 17, 0.7);
+  background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--border);
   flex-wrap: wrap;
@@ -26,29 +26,37 @@
 
 .timeline-back {
   padding: 8px 16px;
-  border-radius: 999px;
+  border-radius: 2px;
   border: 1px solid var(--border);
-  background: var(--surface);
+  background: transparent;
   color: var(--text);
-  font-size: 14px;
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   cursor: pointer;
-  transition: border-color var(--dur-fast) var(--ease-standard), background var(--dur-fast) var(--ease-standard);
+  transition: border-color var(--dur-fast) var(--ease-standard), color var(--dur-fast) var(--ease-standard);
 }
 .timeline-back:hover {
   border-color: var(--accent);
-  background: var(--bg-secondary);
+  color: var(--accent);
 }
 
 .timeline-title {
   margin: 0;
+  font-family: var(--font-display);
   font-size: 20px;
+  font-weight: 600;
   color: var(--text);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .timeline-count {
   margin-left: auto;
   color: var(--text-muted);
-  font-size: 13px;
+  font-family: var(--font-mono);
+  font-size: 12px;
 }
 
 .timeline-main {
@@ -82,7 +90,7 @@
   margin: 0;
   padding: 20px 12px 12px;
   min-width: max-content;
-  border-bottom: 2px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 .tl-item {
   display: flex;
@@ -103,14 +111,15 @@
   color: var(--text);
 }
 .tl-point__year {
+  font-family: var(--font-mono);
   font-size: 12px;
   color: var(--text-muted);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
 .tl-point__dot {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: var(--accent);
   box-shadow: 0 0 8px rgba(66, 191, 255, 0.7);
@@ -133,11 +142,12 @@
 .timeline-tooltip {
   align-self: center;
   padding: 8px 14px;
-  border-radius: 10px;
-  background: rgba(17, 30, 50, 0.95);
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.9);
   border: 1px solid var(--border);
   color: var(--text);
-  font-size: 14px;
+  font-family: var(--font-mono);
+  font-size: 13px;
   display: flex;
   gap: 8px;
   align-items: center;
@@ -145,7 +155,7 @@
 }
 .timeline-tooltip__month { color: var(--text-muted); }
 .timeline-tooltip__sep { color: var(--text-muted); }
-.timeline-tooltip__name { font-weight: 600; }
+.timeline-tooltip__name { font-weight: 600; font-family: var(--font-display); }
 
 /* Mobile vertical list */
 .timeline-mobile {
@@ -170,31 +180,32 @@
   gap: 14px;
   padding: 10px 14px;
   border: 1px solid var(--border);
-  border-radius: 10px;
-  background: var(--surface);
+  border-radius: 2px;
+  background: transparent;
   color: var(--text);
   cursor: pointer;
   text-align: start;
-  transition: border-color var(--dur-fast) var(--ease-standard), background var(--dur-fast) var(--ease-standard);
+  transition: border-color var(--dur-fast) var(--ease-standard), color var(--dur-fast) var(--ease-standard);
 }
 .tl-mobile-item:hover,
 .tl-mobile-item:focus-visible {
   border-color: var(--accent);
-  background: var(--bg-secondary);
+  color: var(--accent);
   outline: none;
 }
 .tl-mobile-item__date {
-  font-size: 13px;
+  font-family: var(--font-mono);
+  font-size: 12px;
   color: var(--text-muted);
   min-width: 110px;
   font-variant-numeric: tabular-nums;
 }
 .tl-mobile-item__name {
-  font-size: 15px;
+  font-family: var(--font-display);
+  font-size: 14px;
   font-weight: 600;
 }
 
-/* Responsive: mobile uses vertical list, hide horizontal */
 @media (max-width: 768px) {
   .timeline-desktop { display: none; }
   .timeline-mobile { display: block; }

@@ -1,17 +1,17 @@
 /* Design tokens — Abandoned but not Forgotten
-   Palette: /home/m7/Projects/Abandoned-but-not-Forgotten/tasks/plan.md §7 */
+   Redesigned: NASA Eyes + SpaceX design DNA (high-contrast, monospace data) */
 
 :root {
-  /* Base */
-  --space-black: #050811;
-  --deep-navy: #0B1424;
-  --card-navy: #111E32;
+  /* Base palette (kept, shifted to high-contrast) */
+  --space-black: #000000;
+  --deep-navy: #0a0a0c;
+  --card-navy: #0a0a0c; /* legacy alias, now near-black panel */
   --electric-blue: #42BFFF;
   --ice-blue: #A6E3FF;
   --archive-gold: #F4C66A;
-  --soft-white: #F2F5FA;
-  --muted-silver: #A6B3C5;
-  --border-blue: #263C56;
+  --soft-white: #FFFFFF;
+  --muted-silver: #A0A0A8;
+  --border-blue: #2a2a30;
   --success-green: #7BD6AD;
 
   /* Destination accents */
@@ -20,16 +20,21 @@
   --deep-space: #8275FF;
 
   /* Semantic */
-  --bg: var(--space-black);
-  --bg-secondary: var(--deep-navy);
-  --surface: var(--card-navy);
-  --text: var(--soft-white);
-  --text-muted: var(--muted-silver);
-  --accent: var(--electric-blue);
-  --accent-glow: var(--ice-blue);
-  --highlight: var(--archive-gold);
-  --border: var(--border-blue);
-  --success: var(--success-green);
+  --bg: #000000;
+  --bg-secondary: #0a0a0c;
+  --surface: #000000;
+  --text: #FFFFFF;
+  --text-muted: #A0A0A8;
+  --accent: #42BFFF;
+  --accent-glow: #7ccfff;
+  --highlight: #F4C66A; /* gold — hero title accent only */
+  --border: #2a2a30;
+  --success: #7BD6AD;
+
+  /* Typography */
+  --font-display: "Space Grotesk", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Space Grotesk", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Arabic", sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
   /* Motion */
   --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -43,12 +48,16 @@ html, body, #root { height: 100%; margin: 0; }
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Arabic", sans-serif;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { color: var(--accent-glow); }
+
+.font-mono, .mono, code, kbd, samp, time { font-family: var(--font-mono); }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

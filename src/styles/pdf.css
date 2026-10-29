@@ -1,16 +1,19 @@
 /* PDF download button styles (Equipment Detail) */
 .eq-download {
-  padding: 8px 16px;
-  border-radius: 999px;
+  padding: 10px 22px;
+  border-radius: 2px;
   border: 1px solid var(--accent);
   background: var(--accent);
-  color: #fff;
-  font-size: 14px;
+  color: #000;
+  font-family: var(--font-display);
+  font-size: 12px;
   font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  transition: opacity var(--dur-fast) var(--ease-standard);
+  transition: background var(--dur-fast) var(--ease-standard), color var(--dur-fast) var(--ease-standard);
 }
-.eq-download:hover { opacity: 0.9; }
+.eq-download:hover { background: var(--accent-glow); border-color: var(--accent-glow); color: #000; }
 .eq-download--loading { opacity: 0.6; pointer-events: none; }

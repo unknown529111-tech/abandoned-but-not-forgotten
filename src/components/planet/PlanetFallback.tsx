@@ -18,7 +18,7 @@ export default function PlanetFallback({ body }: Props) {
     if (ctx) {
       const grad = ctx.createRadialGradient(256, 256, 40, 256, 256, 256);
       grad.addColorStop(0, body.accent);
-      grad.addColorStop(1, '#050811');
+      grad.addColorStop(1, '#000000');
       ctx.fillStyle = grad;
       ctx.fillRect(0, 0, 512, 512);
     }

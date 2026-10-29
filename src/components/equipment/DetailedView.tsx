@@ -96,7 +96,7 @@ export default function DetailedView({ equipment, lang, reducedMotion }: Props) 
             {equipment.coord && (
               <div className="eq-field">
                 <h3 className="eq-field__title">Coordinates</h3>
-                <p>
+                <p className="font-mono">
                   {equipment.coord.lat}°, {equipment.coord.lon}°
                 </p>
                 <p className="eq-source">{equipment.coord.source}</p>

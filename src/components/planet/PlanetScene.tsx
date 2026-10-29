@@ -48,7 +48,7 @@ export default function PlanetScene({ body, points, onHover, onClickPoint, hover
       const grad = ctx.createLinearGradient(0, 0, 512, 256);
       grad.addColorStop(0, body.accent);
       grad.addColorStop(0.5, '#1a2a4a');
-      grad.addColorStop(1, '#050811');
+      grad.addColorStop(1, '#000000');
       ctx.fillStyle = grad;
       ctx.fillRect(0, 0, 512, 256);
       // subtle noise

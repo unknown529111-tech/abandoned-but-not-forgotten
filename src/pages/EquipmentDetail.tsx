@@ -72,15 +72,17 @@ export default function EquipmentDetail() {
               </Suspense>
             </section>
 
-            <SimpleView equipment={eq} lang={lang} />
+            <div className="eq-side">
+              <SimpleView equipment={eq} lang={lang} />
 
-            <DetailedView equipment={eq} lang={lang} reducedMotion={reducedMotion} />
+              <DetailedView equipment={eq} lang={lang} reducedMotion={reducedMotion} />
 
-            <section className="eq-field" aria-label="Download equipment file">
-              <Suspense fallback={<span className="eq-download eq-download--loading">Preparing PDF…</span>}>
-                <DownloadButton equipment={eq} body={body} />
-              </Suspense>
-            </section>
+              <section className="eq-field" aria-label="Download equipment file">
+                <Suspense fallback={<span className="eq-download eq-download--loading">Preparing PDF…</span>}>
+                  <DownloadButton equipment={eq} body={body} />
+                </Suspense>
+              </section>
+            </div>
           </>
         )}
       </main>

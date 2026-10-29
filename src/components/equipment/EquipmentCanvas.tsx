@@ -52,8 +52,8 @@ export default function EquipmentCanvas({ equipment, reducedMotion, resetKey }: 
         dpr={[1, 2]}
         gl={{ antialias: true, alpha: true }}
       >
-        <color attach="background" args={['#050811']} />
-        <fog attach="fog" args={['#050811', 6, 18]} />
+        <color attach="background" args={['#000000']} />
+        <fog attach="fog" args={['#000000', 6, 18]} />
         <ambientLight intensity={0.6} />
         <directionalLight position={[5, 5, 5]} intensity={1.0} />
         <pointLight position={[-5, -3, -3]} intensity={0.4} color="#42BFFF" />

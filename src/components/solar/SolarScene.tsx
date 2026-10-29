@@ -58,7 +58,7 @@ export default function SolarScene({ bodies, selectedIndex, reducedMotion }: Pro
       {/* soft blur backdrop plane */}
       <mesh position={[0, 0, -12]}>
         <planeGeometry args={[60, 40]} />
-        <meshBasicMaterial color="#0B1424" transparent opacity={0.55} />
+        <meshBasicMaterial color="#000000" transparent opacity={0.3} />
       </mesh>
     </group>
   );
