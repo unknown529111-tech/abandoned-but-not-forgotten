@@ -32,10 +32,10 @@ Tasks tracked here (default checklist). Plan document: `tasks/plan.md`.
 - [ ] Explore! routes to correct planet page
 
 ## Phase 3: Planet Explorer
-- [ ] Task 11: Planet surface scene (Three.js, pan/zoom)
-- [ ] Task 12: Equipment point markers (blue dots) + hover tooltip
-- [ ] Task 13: Click point → Equipment Detail; Back preserves camera/zoom
-- [ ] Task 14: Empty/missing-model fallback (image)
+- [x] Task 11: Planet surface scene (Three.js, pan/zoom)
+- [x] Task 12: Equipment point markers (blue dots) + hover tooltip
+- [x] Task 13: Click point → Equipment Detail; Back preserves camera/zoom
+- [x] Task 14: Empty/missing-model fallback (image)
 
 ## Checkpoint: Planet Explorer
 - [ ] Hover shows tooltip; click navigates; back restores view
