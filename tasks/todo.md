@@ -51,10 +51,10 @@ Tasks tracked here (default checklist). Plan document: `tasks/plan.md`.
 - [ ] Model rotates/zooms; toggle works; back restores
 
 ## Phase 5: Downloadable Equipment Files (PDF)
-- [ ] Task 20: PDF template system with per-destination color themes
-- [ ] Task 21: Generate & download equipment file from detail page
-- [ ] Task 22: PDF content (cover, mission, dates, story, specs, tables, images, status, location, sources)
-- [ ] Task 23: Print/PDF pagination test
+- [x] Task 20: PDF template system with per-destination color themes
+- [x] Task 21: Generate & download equipment file from detail page
+- [x] Task 22: PDF content (cover, mission, dates, story, specs, tables, images, status, location, sources)
+- [x] Task 23: Print/PDF pagination test
 
 ## Checkpoint: PDF
 - [ ] Download produces valid PDF with correct theme per destination

@@ -13,7 +13,10 @@ import bodiesData from '../data/bodies.json';
 import equipmentData from '../data/equipment.json';
 import SimpleView from '../components/equipment/SimpleView';
 import DetailedView from '../components/equipment/DetailedView';
+import { PDFDownloadLink } from '@react-pdf/renderer';
+import EquipmentFileDocument from '../components/pdf/EquipmentFileDocument';
 import '../styles/equipment.css';
+import '../styles/pdf.css';
 
 const EquipmentViewer = lazy(() => import('../components/equipment/EquipmentViewer'));
 
@@ -73,6 +76,16 @@ export default function EquipmentDetail() {
             <SimpleView equipment={eq} lang={lang} />
 
             <DetailedView equipment={eq} lang={lang} reducedMotion={reducedMotion} />
+
+            <section className="eq-field" aria-label="Download equipment file">
+              <PDFDownloadLink
+                document={<EquipmentFileDocument equipment={eq} body={body} />}
+                fileName={`${eq.id}-equipment-file.pdf`}
+                className="eq-download"
+              >
+                {({ loading }) => (loading ? 'Preparing PDF…' : t('download'))}
+              </PDFDownloadLink>
+            </section>
           </>
         )}
       </main>

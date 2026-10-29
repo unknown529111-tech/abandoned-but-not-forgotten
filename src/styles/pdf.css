@@ -1,0 +1,16 @@
+/* PDF download button styles (Equipment Detail) */
+.eq-download {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity var(--dur-fast) var(--ease-standard);
+}
+.eq-download:hover { opacity: 0.9; }
+.eq-download--loading { opacity: 0.6; pointer-events: none; }
