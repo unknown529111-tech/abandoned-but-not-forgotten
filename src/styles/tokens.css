@@ -1,0 +1,59 @@
+/* Design tokens — Abandoned but not Forgotten
+   Palette: /home/m7/Projects/Abandoned-but-not-Forgotten/tasks/plan.md §7 */
+
+:root {
+  /* Base */
+  --space-black: #050811;
+  --deep-navy: #0B1424;
+  --card-navy: #111E32;
+  --electric-blue: #42BFFF;
+  --ice-blue: #A6E3FF;
+  --archive-gold: #F4C66A;
+  --soft-white: #F2F5FA;
+  --muted-silver: #A6B3C5;
+  --border-blue: #263C56;
+  --success-green: #7BD6AD;
+
+  /* Destination accents */
+  --mars: #C76A45;
+  --moon: #AAB6C4;
+  --deep-space: #8275FF;
+
+  /* Semantic */
+  --bg: var(--space-black);
+  --bg-secondary: var(--deep-navy);
+  --surface: var(--card-navy);
+  --text: var(--soft-white);
+  --text-muted: var(--muted-silver);
+  --accent: var(--electric-blue);
+  --accent-glow: var(--ice-blue);
+  --highlight: var(--archive-gold);
+  --border: var(--border-blue);
+  --success: var(--success-green);
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-fast: 200ms;
+  --dur-base: 300ms;
+  --dur-slow: 450ms;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Arabic", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-glow); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
