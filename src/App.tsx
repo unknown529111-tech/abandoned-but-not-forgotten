@@ -2,7 +2,8 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import SolarSystem from './pages/SolarSystem';
 import PlanetExplorer from './pages/PlanetExplorer';
 import EquipmentDetail from './pages/EquipmentDetail';
-import { TimelinePage, NotFound } from './pages/Placeholders';
+import TimelinePage from './pages/Timeline';
+import { NotFound } from './pages/Placeholders';
 import './styles/tokens.css';
 
 export default function App() {
