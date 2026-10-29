@@ -13,12 +13,11 @@ import bodiesData from '../data/bodies.json';
 import equipmentData from '../data/equipment.json';
 import SimpleView from '../components/equipment/SimpleView';
 import DetailedView from '../components/equipment/DetailedView';
-import { PDFDownloadLink } from '@react-pdf/renderer';
-import EquipmentFileDocument from '../components/pdf/EquipmentFileDocument';
 import '../styles/equipment.css';
 import '../styles/pdf.css';
 
 const EquipmentViewer = lazy(() => import('../components/equipment/EquipmentViewer'));
+const DownloadButton = lazy(() => import('../components/equipment/DownloadButton'));
 
 const bodies = bodiesData as Body[];
 const allEquipment = equipmentData as Equipment[];
@@ -49,9 +48,9 @@ export default function EquipmentDetail() {
   };
 
   return (
-    <div className="eq-page">
+    <div className="eq-page motion-explore" id="main">
       <header className="eq-toolbar">
-        <button type="button" className="eq-back" onClick={goBack}>
+        <button type="button" className="eq-back motion-back" onClick={goBack} aria-label="Back to planet">
           ← {t('backPlanet')}
         </button>
         <h1 className="eq-title">{eq ? eq.name[lang] : equipmentId}</h1>
@@ -78,13 +77,9 @@ export default function EquipmentDetail() {
             <DetailedView equipment={eq} lang={lang} reducedMotion={reducedMotion} />
 
             <section className="eq-field" aria-label="Download equipment file">
-              <PDFDownloadLink
-                document={<EquipmentFileDocument equipment={eq} body={body} />}
-                fileName={`${eq.id}-equipment-file.pdf`}
-                className="eq-download"
-              >
-                {({ loading }) => (loading ? 'Preparing PDF…' : t('download'))}
-              </PDFDownloadLink>
+              <Suspense fallback={<span className="eq-download eq-download--loading">Preparing PDF…</span>}>
+                <DownloadButton equipment={eq} body={body} />
+              </Suspense>
             </section>
           </>
         )}

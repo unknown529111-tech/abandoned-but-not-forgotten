@@ -1,8 +1,7 @@
 // src/components/solar/SolarCanvas.tsx
 // Lazy-loaded 3D canvas for the Solar System landing scene.
 import { Canvas } from '@react-three/fiber';
-import { Stars } from '@react-three/drei';
-import { useMemo } from 'react';
+import { useMemo, useRef, useEffect, useState } from 'react';
 import type { Body } from '../../types';
 import SolarScene from './SolarScene';
 
@@ -14,20 +13,36 @@ interface Props {
 
 export default function SolarCanvas({ bodies, selectedIndex, reducedMotion }: Props) {
   const dpr = useMemo(() => [1, 2] as [number, number], []);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(true);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el || typeof IntersectionObserver === 'undefined') return;
+    const obs = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { threshold: 0.1 },
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
   return (
-    <Canvas
-      className="solar-canvas"
-      camera={{ position: [0, 0, 9], fov: 48 }}
-      dpr={dpr}
-      gl={{ antialias: true, alpha: true }}
-    >
-      <color attach="background" args={['#050811']} />
-      <fog attach="fog" args={['#050811', 9, 28]} />
-      <ambientLight intensity={0.35} />
-      <directionalLight position={[6, 6, 6]} intensity={1.1} />
-      <pointLight position={[-6, -4, -4]} intensity={0.4} color="#42BFFF" />
-      <Stars radius={90} depth={60} count={4000} factor={4} saturation={0} fade speed={reducedMotion ? 0 : 0.4} />
-      <SolarScene bodies={bodies} selectedIndex={selectedIndex} reducedMotion={reducedMotion} />
-    </Canvas>
+    <div ref={containerRef} style={{ width: '100%', height: '100%' }}>
+      <Canvas
+        className="solar-canvas"
+        frameloop={inView ? 'always' : 'never'}
+        camera={{ position: [0, 0, 9], fov: 48 }}
+        dpr={dpr}
+        gl={{ antialias: true, alpha: true }}
+      >
+        <color attach="background" args={['#050811']} />
+        <fog attach="fog" args={['#050811', 9, 28]} />
+        <ambientLight intensity={0.35} />
+        <directionalLight position={[6, 6, 6]} intensity={1.1} />
+        <pointLight position={[-6, -4, -4]} intensity={0.4} color="#42BFFF" />
+        <SolarScene bodies={bodies} selectedIndex={selectedIndex} reducedMotion={reducedMotion} />
+      </Canvas>
+    </div>
   );
 }

@@ -45,7 +45,7 @@ export default function SolarScene({ bodies, selectedIndex, reducedMotion }: Pro
             meshes.current[i] = el;
           }}
         >
-          <sphereGeometry args={[0.7, 48, 48]} />
+          <sphereGeometry args={[0.7, 24, 24]} />
           <meshStandardMaterial
             color={body.accent}
             roughness={0.35}

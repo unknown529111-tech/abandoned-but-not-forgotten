@@ -41,12 +41,13 @@ export default function PlanetExplorer() {
   const lang = (locale || i18n.language || 'en').startsWith('ar') ? 'ar' : 'en';
 
   return (
-    <div className="planet-page">
+    <div className="planet-page motion-side-slide" id="main">
       <header className="planet-toolbar">
         <button
           type="button"
-          className="planet-back"
+          className="planet-back motion-back"
           onClick={() => navigate('/')}
+          aria-label="Back to solar system"
         >
           ← {t('backSolar')}
         </button>

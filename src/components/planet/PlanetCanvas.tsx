@@ -1,7 +1,7 @@
 // src/components/planet/PlanetCanvas.tsx
 // Lazy-loaded 3D canvas for the Planet Explorer. Orthographic pan/zoom camera,
 // procedural planet surface texture, equipment point markers.
-import { useRef, useEffect, Component } from 'react';
+import { useRef, useEffect, Component, useState } from 'react';
 import type { ReactNode } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
@@ -44,6 +44,16 @@ export default function PlanetCanvas({
 }: Props) {
   const controlsRef = useRef<any>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(true);
+
+  useEffect(() => {
+    const el = wrapperRef.current;
+    if (!el || typeof IntersectionObserver === 'undefined') return;
+    const obs = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting), { threshold: 0.1 });
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
 
   const handleChange = () => {
     const controls = controlsRef.current;
@@ -71,11 +81,12 @@ export default function PlanetCanvas({
   const zoom = Math.max(0.5, initialCamera.zoom || 1);
 
   return (
-    <div className="planet-canvas-wrap" style={{ position: 'relative', width: '100%', height: '100%' }}>
+    <div ref={wrapperRef} className="planet-canvas-wrap" style={{ position: 'relative', width: '100%', height: '100%' }}>
       <CanvasErrorBoundary fallback={<PlanetFallback body={body} />}>
         <Canvas
           className="planet-canvas"
           orthographic
+          frameloop={inView ? 'always' : 'never'}
           camera={{ position: [0, 0, 10], zoom }}
           dpr={[1, 2]}
           gl={{ antialias: true, alpha: true }}

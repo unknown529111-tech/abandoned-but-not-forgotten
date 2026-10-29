@@ -10,7 +10,7 @@ interface Props {
   onClick: (id: string) => void;
 }
 
-export default function TimelinePoint({ item, lang, hovered, onHover, onClick }: Props) {
+export default function TimelinePoint({ item, lang, hovered, onHover, onClick, index = 0 }: Props & { index?: number }) {
   const launch = item.launchDate as string;
   const year = launch.slice(0, 4);
   const month = new Date(launch).toLocaleString(lang === 'ar' ? 'ar' : 'en', {
@@ -18,7 +18,7 @@ export default function TimelinePoint({ item, lang, hovered, onHover, onClick }:
   });
   const name = item.name[lang];
   return (
-    <li className="tl-item" role="listitem">
+    <li className="tl-item" role="listitem" style={{ animationDelay: `${index * 40}ms` }}>
       <button
         type="button"
         className={`tl-point${hovered ? ' tl-point--hover' : ''}`}

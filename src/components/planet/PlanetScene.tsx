@@ -109,12 +109,14 @@ export default function PlanetScene({ body, points, onHover, onClickPoint, hover
                 aria-label={`${name}${eq.launchDate ? ' ' + eq.launchDate : ''}`}
                 onMouseEnter={() => onHover(eq)}
                 onMouseLeave={() => onHover(null)}
+                onFocus={() => onHover(eq)}
+                onBlur={() => onHover(null)}
                 onClick={() => onClickPoint(eq.id)}
               >
                 <span className="planet-point__dot" />
               </button>
               {isHovered && (
-                <div className="planet-tooltip" role="tooltip">
+                <div className="planet-tooltip motion-tooltip" role="tooltip">
                   <span className="planet-tooltip__name">{name}</span>
                   {eq.launchDate && <span className="planet-tooltip__date">• {eq.launchDate}</span>}
                 </div>

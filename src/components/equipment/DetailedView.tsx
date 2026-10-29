@@ -31,7 +31,7 @@ export default function DetailedView({ equipment, lang, reducedMotion }: Props) 
       <AnimatePresence initial={false}>
         {expanded && (
           <motion.div
-            className="eq-detailed__body"
+            className="eq-detailed__body motion-expand"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}

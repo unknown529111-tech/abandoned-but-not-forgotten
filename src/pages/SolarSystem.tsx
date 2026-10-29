@@ -26,7 +26,12 @@ export default function SolarSystem() {
     return 0;
   });
 
+  const [show3D, setShow3D] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
+  useEffect(() => {
+    const id = window.setTimeout(() => setShow3D(true), 2000);
+    return () => window.clearTimeout(id);
+  }, []);
 
   useEffect(() => {
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -94,10 +99,12 @@ export default function SolarSystem() {
   const lang = (locale || i18n.language || 'en').startsWith('ar') ? 'ar' : 'en';
 
   return (
-    <div className="solar-page">
+    <div className="solar-page motion-page-enter" id="main">
       <div className="solar-backdrop" />
       <div
         className="solar-stage"
+        role="region"
+        aria-label="Solar system carousel"
         onPointerDown={onPointerDown}
         onPointerUp={onPointerUp}
         onPointerCancel={() => {
@@ -106,13 +113,17 @@ export default function SolarSystem() {
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
       >
-        <Suspense fallback={<div className="solar-loading">Loading 3D scene…</div>}>
-          <SolarCanvas bodies={bodies} selectedIndex={index} reducedMotion={reducedMotion} />
-        </Suspense>
+        {show3D ? (
+          <Suspense fallback={<div className="solar-loading">Loading 3D scene…</div>}>
+            <SolarCanvas bodies={bodies} selectedIndex={index} reducedMotion={reducedMotion} />
+          </Suspense>
+        ) : (
+          <div className="solar-loading" aria-hidden="true">Preparing scene…</div>
+        )}
       </div>
       <div className="solar-hint">Drag, swipe, or use ← →</div>
       <div className="solar-ui">
-        <h1 className="solar-name">{selected ? selected.name[lang] : ''}</h1>
+        <h1 className="solar-name" aria-live="polite">{selected ? selected.name[lang] : ''}</h1>
         <div className="solar-actions">
           <button
             type="button"

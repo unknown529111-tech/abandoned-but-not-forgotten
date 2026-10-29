@@ -1,0 +1,121 @@
+/* Unified motion system — Abandoned but not Forgotten (Phase 7)
+   Single source of truth for durations/easings lives in tokens.css
+   (--ease-standard, --dur-fast/base/slow). This file defines the named
+   transitions from plan §8 and the reduced-motion policy. */
+
+/* ---------- Page enter fade ---------- */
+.motion-page-enter {
+  animation: motion-page-enter var(--dur-base) var(--ease-standard) both;
+}
+@keyframes motion-page-enter {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ---------- Side slide with depth (route hand-off) ---------- */
+.motion-side-slide {
+  animation: motion-side-slide var(--dur-slow) var(--ease-standard) both;
+}
+@keyframes motion-side-slide {
+  from { opacity: 0; transform: translateX(32px) translateZ(-40px) scale(0.97); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ---------- Explore transition (body -> planet) ---------- */
+.motion-explore {
+  animation: motion-explore var(--dur-slow) var(--ease-standard) both;
+}
+@keyframes motion-explore {
+  from { opacity: 0; transform: scale(0.96) translateY(12px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ---------- Camera move (3D lerp handled in R3F; CSS helper for overlays) ---------- */
+.motion-camera {
+  transition: transform var(--dur-slow) var(--ease-standard), opacity var(--dur-slow) var(--ease-standard);
+}
+
+/* ---------- Tooltip fade ---------- */
+.motion-tooltip {
+  animation: motion-tooltip-fade var(--dur-fast) var(--ease-standard) both;
+}
+@keyframes motion-tooltip-fade {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ---------- Expand height + opacity (Detailed view) ---------- */
+.motion-expand {
+  transition: height var(--dur-base) var(--ease-standard), opacity var(--dur-base) var(--ease-standard);
+}
+
+/* ---------- Timeline points staggered appear ---------- */
+.tl-item {
+  animation: motion-point-appear var(--dur-base) var(--ease-standard) both;
+}
+@keyframes motion-point-appear {
+  from { opacity: 0; transform: translateY(12px) scale(0.85); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ---------- Back (smooth) ---------- */
+.motion-back {
+  transition: border-color var(--dur-fast) var(--ease-standard),
+              background var(--dur-fast) var(--ease-standard),
+              transform var(--dur-fast) var(--ease-standard);
+}
+
+/* ---------- Download (simple transition) ---------- */
+.motion-download {
+  transition: opacity var(--dur-fast) var(--ease-standard),
+              transform var(--dur-fast) var(--ease-standard);
+}
+
+/* ---------- Focus rings (accessibility) ---------- */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+button:focus-visible,
+a:focus-visible,
+[role='button']:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ---------- Skip link ---------- */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 8px;
+  z-index: 100;
+  padding: 8px 14px;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.skip-link:focus { left: 8px; }
+
+/* ---------- Reduced motion: disable all decorative motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .motion-page-enter,
+  .motion-side-slide,
+  .motion-explore,
+  .motion-tooltip,
+  .tl-item {
+    animation: none !important;
+  }
+  .motion-camera,
+  .motion-expand,
+  .motion-back,
+  .motion-download {
+    transition: none !important;
+  }
+  .motion-page-enter,
+  .motion-side-slide,
+  .motion-explore {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

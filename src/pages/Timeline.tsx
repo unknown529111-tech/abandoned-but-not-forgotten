@@ -44,12 +44,13 @@ export default function TimelinePage() {
   const hoverYear = hovered ? (hovered.launchDate as string).slice(0, 4) : '';
 
   return (
-    <div className="timeline-page">
+    <div className="timeline-page motion-page-enter" id="main">
       <header className="timeline-toolbar">
         <button
           type="button"
-          className="timeline-back"
+          className="timeline-back motion-back"
           onClick={() => navigate('/')}
+          aria-label="Back to solar system"
         >
           ← {t('backSolar')}
         </button>
@@ -64,10 +65,11 @@ export default function TimelinePage() {
         <section className="timeline-desktop" aria-label="Timeline">
           <div className="timeline-track-wrap">
             <ul className="timeline-track" role="list">
-              {timelineItems.map((item) => (
+              {timelineItems.map((item, i) => (
                 <TimelinePoint
                   key={item.id}
                   item={item}
+                  index={i}
                   lang={lang}
                   hovered={hoveredId === item.id}
                   onHover={setHoveredId}
@@ -78,7 +80,7 @@ export default function TimelinePage() {
           </div>
 
           {hovered && (
-            <div className="timeline-tooltip" role="tooltip">
+            <div className="timeline-tooltip motion-tooltip" role="tooltip">
               <span className="timeline-tooltip__month">
                 {hoverMonth} {hoverYear}
               </span>
