@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import './styles/tokens.css';
+import './tokens.css';
+import './base.css';
 import './styles/motion.css';
 
 const SolarSystem = lazy(() => import('./pages/SolarSystem'));
