@@ -56,11 +56,6 @@ function coordToVec3(eq: Equipment, noCoordIndex: number, totalNoCoord: number):
 export default function PlanetScene({ body, points, onHover, onClickPoint, hoveredId, portalRef }: Props) {
   const textures = useTexture(TEXTURES);
   const tex = (textures as any)[body.id] as THREE.Texture | undefined;
-  const hasTex = !!tex;
-  const isSun = body.id === 'sun';
-  // Pluto: muted color sphere (no texture). Others without texture keep accent.
-  const color = body.id === 'pluto' ? '#8a8a8a' : (hasTex ? '#ffffff' : body.accent);
-
   // Precompute positions.
   const noCoordItems = points.filter((p) => !p.coord);
   const positions = points.map((eq) => {
@@ -77,13 +72,12 @@ export default function PlanetScene({ body, points, onHover, onClickPoint, hover
       <mesh>
         <sphereGeometry args={[RADIUS, 64, 64]} />
         <meshStandardMaterial
-          map={hasTex ? tex : undefined}
-          color={color}
-          roughness={isSun ? 0.9 : 0.75}
+          map={tex}
+          color="#ffffff"
+          roughness={0.75}
           metalness={0.1}
-          emissive={isSun ? '#ffffff' : body.accent}
-          emissiveIntensity={isSun ? 1.2 : 0.08}
-          emissiveMap={isSun && hasTex ? tex : undefined}
+          emissive={body.accent}
+          emissiveIntensity={0.08}
         />
       </mesh>
 

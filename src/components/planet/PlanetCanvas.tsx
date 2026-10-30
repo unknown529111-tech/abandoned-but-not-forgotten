@@ -1,7 +1,7 @@
 // src/components/planet/PlanetCanvas.tsx
 // Lazy-loaded 3D canvas for the Planet Explorer. Orthographic pan/zoom camera,
 // procedural planet surface texture, equipment point markers.
-import { useRef, useEffect, Component, useState, Suspense } from 'react';
+import { useRef, useEffect, Component, Suspense } from 'react';
 import type { ReactNode } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
@@ -44,50 +44,32 @@ export default function PlanetCanvas({
 }: Props) {
   const controlsRef = useRef<any>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
-  const wrapperRef = useRef<HTMLDivElement>(null);
-  const [inView, setInView] = useState(true);
-
-  useEffect(() => {
-    const el = wrapperRef.current;
-    if (!el || typeof IntersectionObserver === 'undefined') return;
-    const obs = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting), { threshold: 0.1 });
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
 
   const handleChange = () => {
     const controls = controlsRef.current;
     if (!controls) return;
-    const cam = controls.object as THREE.OrthographicCamera;
-    onCameraChange({
-      x: controls.target.x,
-      y: controls.target.y,
-      zoom: cam.zoom || 1,
-    });
+    const cam = controls.object as THREE.PerspectiveCamera;
+    onCameraChange({ x: controls.target.x, y: controls.target.y, zoom: cam.zoom || 1 });
   };
 
-  // Apply restored camera state once on mount.
   useEffect(() => {
     const controls = controlsRef.current;
     if (!controls) return;
     controls.target.set(initialCamera.x || 0, initialCamera.y || 0, 0);
-    const cam = controls.object as THREE.OrthographicCamera;
+    const cam = controls.object as THREE.PerspectiveCamera;
     cam.zoom = initialCamera.zoom || 1;
     cam.updateProjectionMatrix();
     controls.update();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const zoom = Math.max(0.5, initialCamera.zoom || 1);
-
   return (
-    <div ref={wrapperRef} className="planet-canvas-wrap" style={{ position: 'relative', width: '100%', height: '100%' }}>
+    <div className="planet-canvas-wrap" style={{ position: 'relative', width: '100%', height: '100%' }}>
       <CanvasErrorBoundary fallback={<PlanetFallback body={body} />}>
         <Canvas
           className="planet-canvas"
-          orthographic
-          frameloop={inView ? 'always' : 'never'}
-          camera={{ position: [0, 0, 10], zoom }}
+          frameloop="always"
+          camera={{ position: [0, 0, 10], fov: 45, near: 0.1, far: 1000 }}
           dpr={[1, 2]}
           gl={{ antialias: true, alpha: true }}
         >
