@@ -55,9 +55,9 @@ export default function PlanetCanvas({
   useEffect(() => {
     const controls = controlsRef.current;
     if (!controls) return;
-    controls.target.set(initialCamera.x || 0, initialCamera.y || 0, 0);
+    controls.target.set(0, 0, 0);
     const cam = controls.object as THREE.OrthographicCamera;
-    cam.zoom = initialCamera.zoom || 1;
+    cam.zoom = 1;
     cam.updateProjectionMatrix();
     controls.update();
     // eslint-disable-next-line react-hooks/exhaustive-deps
