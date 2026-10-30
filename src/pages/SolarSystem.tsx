@@ -69,12 +69,17 @@ export default function SolarSystem() {
 
   const dragStart = useRef<number | null>(null);
   const touchStart = useRef<number | null>(null);
+  const touchHandled = useRef(false);
   const THRESHOLD = 40;
 
   const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
     dragStart.current = e.clientX;
   };
   const onPointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (touchHandled.current) {
+      touchHandled.current = false;
+      return;
+    }
     if (dragStart.current === null) return;
     const dx = e.clientX - dragStart.current;
     if (Math.abs(dx) > THRESHOLD) {
@@ -92,6 +97,7 @@ export default function SolarSystem() {
     if (Math.abs(dx) > THRESHOLD) {
       if (dx < 0) go(1);
       else go(-1);
+      touchHandled.current = true;
     }
     touchStart.current = null;
   };
