@@ -75,8 +75,8 @@ export default function PlanetCanvas({
           gl={{ antialias: true, alpha: true }}
         >
           <color attach="background" args={['#000000']} />
-          <ambientLight intensity={0.5} />
-          <directionalLight position={[6, 6, 6]} intensity={1.0} />
+          <ambientLight intensity={0.8} />
+          <directionalLight position={[6, 6, 6]} intensity={1.5} />
           {/* Removed blue point light — it produced a "lightning ring" glow on
               every planet (limb glow artifact). Clean directional lighting only. */}
           <Suspense fallback={null}>

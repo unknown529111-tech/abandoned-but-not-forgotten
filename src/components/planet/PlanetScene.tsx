@@ -77,7 +77,7 @@ export default function PlanetScene({ body, points, onHover, onClickPoint, hover
           roughness={0.75}
           metalness={0.1}
           emissive={body.accent}
-          emissiveIntensity={0.08}
+          emissiveIntensity={0.15}
         />
       </mesh>
 
