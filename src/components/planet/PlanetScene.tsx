@@ -70,11 +70,8 @@ export default function PlanetScene({ body, points, onHover, onClickPoint, hover
 
   return (
     <group>
-      {/* Starfield background sphere (inside-out). */}
-      <mesh>
-        <sphereGeometry args={[15, 32, 32]} />
-        <meshBasicMaterial map={textures.stars} side={THREE.BackSide} />
-      </mesh>
+      {/* Starfield removed: in orthographic view the sphere edge showed as a
+          "lightning ring" around the planet. Stars live on the Solar page. */}
 
       {/* Planet surface */}
       <mesh>
