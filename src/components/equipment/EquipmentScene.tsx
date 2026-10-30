@@ -4,6 +4,10 @@
 import { useGLTF } from '@react-three/drei';
 import type { Equipment } from '../../types';
 import Surveyor1Model from './models/Surveyor1Model';
+import Apollo11LMModel from './models/Apollo11LMModel';
+import Viking1Model from './models/Viking1Model';
+import CuriosityModel from './models/CuriosityModel';
+import Voyager1Model from './models/Voyager1Model';
 
 interface Props {
   equipment: Equipment;
@@ -23,6 +27,14 @@ export default function EquipmentScene({ equipment, reducedMotion }: Props) {
         <GLTFModel url={equipment.modelUrl} />
       ) : equipment.id === 'surveyor-1' ? (
         <Surveyor1Model reducedMotion={reducedMotion} />
+      ) : equipment.id === 'apollo-11-lm' ? (
+        <Apollo11LMModel reducedMotion={reducedMotion} />
+      ) : equipment.id === 'viking-1' ? (
+        <Viking1Model reducedMotion={reducedMotion} />
+      ) : equipment.id === 'curiosity' ? (
+        <CuriosityModel reducedMotion={reducedMotion} />
+      ) : equipment.id === 'voyager-1' ? (
+        <Voyager1Model reducedMotion={reducedMotion} />
       ) : (
         <mesh rotation={[0.3, 0.4, 0]}>
           <icosahedronGeometry args={[1.2, 1]} />
