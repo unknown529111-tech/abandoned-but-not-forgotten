@@ -1,10 +1,10 @@
 // src/components/planet/PlanetCanvas.tsx
 // Lazy-loaded 3D canvas for the Planet Explorer. Orthographic pan/zoom camera,
 // procedural planet surface texture, equipment point markers.
-import { useRef, useEffect, Component, useState } from 'react';
+import { useRef, useEffect, Component, useState, Suspense } from 'react';
 import type { ReactNode } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Stars } from '@react-three/drei';
+import { OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
 import type { Body, Equipment } from '../../types';
 import PlanetScene from './PlanetScene';
@@ -95,8 +95,8 @@ export default function PlanetCanvas({
           <ambientLight intensity={0.5} />
           <directionalLight position={[6, 6, 6]} intensity={1.0} />
           <pointLight position={[-6, -4, -4]} intensity={0.35} color="#42BFFF" />
-          {!reducedMotion && <Stars radius={60} depth={40} count={1500} factor={3} saturation={0} fade speed={0.2} />}
-          <PlanetScene
+          <Suspense fallback={null}>
+            <PlanetScene
             body={body}
             points={points}
             reducedMotion={reducedMotion}
@@ -105,6 +105,7 @@ export default function PlanetCanvas({
             hoveredId={hoveredId}
             portalRef={overlayRef}
           />
+          </Suspense>
           <OrbitControls
             ref={controlsRef}
             makeDefault

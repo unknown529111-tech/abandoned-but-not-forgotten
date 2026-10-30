@@ -1,7 +1,8 @@
 // src/components/solar/SolarScene.tsx
 import { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
-import type { Mesh } from 'three';
+import { useTexture } from '@react-three/drei';
+import * as THREE from 'three';
 import type { Body } from '../../types';
 
 interface Props {
@@ -13,8 +14,27 @@ interface Props {
 const SPACING = 2.4;
 const DEPTH = 1.6;
 
+// Body id -> texture URL (under public/). Missing entries (pluto, deep-space/other)
+// fall back to a colored sphere.
+const TEXTURES = {
+  mercury: '/textures/2k_mercury.jpg',
+  venus: '/textures/2k_venus_surface.jpg',
+  earth: '/textures/2k_earth_daymap.jpg',
+  mars: '/textures/2k_mars.jpg',
+  jupiter: '/textures/2k_jupiter.jpg',
+  saturn: '/textures/2k_saturn.jpg',
+  uranus: '/textures/2k_uranus.jpg',
+  neptune: '/textures/2k_neptune.jpg',
+  moon: '/textures/2k_moon.jpg',
+  sun: '/textures/2k_sun.jpg',
+  ceres: '/textures/2k_ceres_fictional.jpg',
+  saturnRing: '/textures/2k_saturn_ring_alpha.png',
+  stars: '/textures/2k_stars.jpg',
+};
+
 export default function SolarScene({ bodies, selectedIndex, reducedMotion }: Props) {
-  const meshes = useRef<(Mesh | null)[]>([]);
+  const meshes = useRef<any[]>([]);
+  const textures = useTexture(TEXTURES);
 
   useFrame((_, delta) => {
     bodies.forEach((_, i) => {
@@ -38,23 +58,52 @@ export default function SolarScene({ bodies, selectedIndex, reducedMotion }: Pro
 
   return (
     <group>
-      {bodies.map((body, i) => (
-        <mesh
-          key={body.id}
-          ref={(el) => {
-            meshes.current[i] = el;
-          }}
-        >
-          <sphereGeometry args={[0.7, 24, 24]} />
-          <meshStandardMaterial
-            color={body.accent}
-            roughness={0.35}
-            metalness={0.15}
-            emissive={body.accent}
-            emissiveIntensity={i === selectedIndex ? 0.35 : 0.12}
-          />
-        </mesh>
-      ))}
+      {/* Starfield background sphere (inside-out). */}
+      <mesh>
+        <sphereGeometry args={[40, 32, 32]} />
+        <meshBasicMaterial map={textures.stars} side={THREE.BackSide} />
+      </mesh>
+
+      {bodies.map((body, i) => {
+        const tex = (textures as any)[body.id] as THREE.Texture | undefined;
+        const isSun = body.id === 'sun';
+        const hasTex = !!tex;
+        const ringTex = textures.saturnRing;
+        return (
+          <group
+            key={body.id}
+            ref={(el) => {
+              meshes.current[i] = el;
+            }}
+          >
+            <mesh>
+              <sphereGeometry args={[0.7, 24, 24]} />
+              <meshStandardMaterial
+                map={hasTex ? tex : undefined}
+                color={hasTex ? '#ffffff' : body.accent}
+                roughness={isSun ? 0.9 : 0.35}
+                metalness={0.15}
+                emissive={isSun ? '#ffffff' : body.accent}
+                emissiveIntensity={isSun ? 1.2 : (i === selectedIndex ? 0.35 : 0.12)}
+                emissiveMap={isSun && hasTex ? tex : undefined}
+              />
+            </mesh>
+            {body.id === 'saturn' && (
+              <mesh rotation={[Math.PI / 2, 0, 0]}>
+                <ringGeometry args={[0.95, 1.5, 64]} />
+                <meshStandardMaterial
+                  map={ringTex}
+                  transparent
+                  side={THREE.DoubleSide}
+                  roughness={0.6}
+                  metalness={0.1}
+                />
+              </mesh>
+            )}
+          </group>
+        );
+      })}
+
       {/* soft blur backdrop plane */}
       <mesh position={[0, 0, -12]}>
         <planeGeometry args={[60, 40]} />

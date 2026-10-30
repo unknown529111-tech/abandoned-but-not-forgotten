@@ -1,7 +1,6 @@
 // src/components/planet/PlanetScene.tsx
-import { useMemo } from 'react';
 import * as THREE from 'three';
-import { Html } from '@react-three/drei';
+import { Html, useTexture } from '@react-three/drei';
 import type { Body, Equipment } from '../../types';
 
 interface Props {
@@ -15,6 +14,22 @@ interface Props {
 }
 
 const RADIUS = 2;
+
+const TEXTURES = {
+  mercury: '/textures/2k_mercury.jpg',
+  venus: '/textures/2k_venus_surface.jpg',
+  earth: '/textures/2k_earth_daymap.jpg',
+  mars: '/textures/2k_mars.jpg',
+  jupiter: '/textures/2k_jupiter.jpg',
+  saturn: '/textures/2k_saturn.jpg',
+  uranus: '/textures/2k_uranus.jpg',
+  neptune: '/textures/2k_neptune.jpg',
+  moon: '/textures/2k_moon.jpg',
+  sun: '/textures/2k_sun.jpg',
+  ceres: '/textures/2k_ceres_fictional.jpg',
+  saturnRing: '/textures/2k_saturn_ring_alpha.png',
+  stars: '/textures/2k_stars.jpg',
+};
 
 function coordToVec3(eq: Equipment, noCoordIndex: number, totalNoCoord: number): [number, number, number] {
   if (eq.coord) {
@@ -39,31 +54,12 @@ function coordToVec3(eq: Equipment, noCoordIndex: number, totalNoCoord: number):
 }
 
 export default function PlanetScene({ body, points, onHover, onClickPoint, hoveredId, portalRef }: Props) {
-  const texture = useMemo(() => {
-    const canvas = document.createElement('canvas');
-    canvas.width = 512;
-    canvas.height = 256;
-    const ctx = canvas.getContext('2d');
-    if (ctx) {
-      const grad = ctx.createLinearGradient(0, 0, 512, 256);
-      grad.addColorStop(0, body.accent);
-      grad.addColorStop(0.5, '#1a2a4a');
-      grad.addColorStop(1, '#000000');
-      ctx.fillStyle = grad;
-      ctx.fillRect(0, 0, 512, 256);
-      // subtle noise
-      for (let i = 0; i < 1200; i++) {
-        const x = Math.random() * 512;
-        const y = Math.random() * 256;
-        const a = Math.random() * 0.08;
-        ctx.fillStyle = `rgba(255,255,255,${a})`;
-        ctx.fillRect(x, y, 1, 1);
-      }
-    }
-    const t = new THREE.CanvasTexture(canvas);
-    t.colorSpace = THREE.SRGBColorSpace;
-    return t;
-  }, [body.accent]);
+  const textures = useTexture(TEXTURES);
+  const tex = (textures as any)[body.id] as THREE.Texture | undefined;
+  const hasTex = !!tex;
+  const isSun = body.id === 'sun';
+  // Pluto: muted color sphere (no texture). Others without texture keep accent.
+  const color = body.id === 'pluto' ? '#8a8a8a' : (hasTex ? '#ffffff' : body.accent);
 
   // Precompute positions.
   const noCoordItems = points.filter((p) => !p.coord);
@@ -74,18 +70,39 @@ export default function PlanetScene({ body, points, onHover, onClickPoint, hover
 
   return (
     <group>
+      {/* Starfield background sphere (inside-out). */}
+      <mesh>
+        <sphereGeometry args={[15, 32, 32]} />
+        <meshBasicMaterial map={textures.stars} side={THREE.BackSide} />
+      </mesh>
+
       {/* Planet surface */}
       <mesh>
         <sphereGeometry args={[RADIUS, 64, 64]} />
         <meshStandardMaterial
-          map={texture}
-          color={body.accent}
-          roughness={0.75}
+          map={hasTex ? tex : undefined}
+          color={color}
+          roughness={isSun ? 0.9 : 0.75}
           metalness={0.1}
-          emissive={body.accent}
-          emissiveIntensity={0.08}
+          emissive={isSun ? '#ffffff' : body.accent}
+          emissiveIntensity={isSun ? 1.2 : 0.08}
+          emissiveMap={isSun && hasTex ? tex : undefined}
         />
       </mesh>
+
+      {/* Saturn rings */}
+      {body.id === 'saturn' && (
+        <mesh rotation={[Math.PI / 2, 0, 0]}>
+          <ringGeometry args={[RADIUS + 0.3, RADIUS + 1.6, 64]} />
+          <meshStandardMaterial
+            map={textures.saturnRing}
+            transparent
+            side={THREE.DoubleSide}
+            roughness={0.6}
+            metalness={0.1}
+          />
+        </mesh>
+      )}
 
       {/* Equipment points */}
       {points.map((eq, i) => {

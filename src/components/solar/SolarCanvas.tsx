@@ -1,7 +1,7 @@
 // src/components/solar/SolarCanvas.tsx
 // Lazy-loaded 3D canvas for the Solar System landing scene.
 import { Canvas } from '@react-three/fiber';
-import { useMemo, useRef, useEffect, useState } from 'react';
+import { useMemo, useRef, useEffect, useState, Suspense } from 'react';
 import type { Body } from '../../types';
 import SolarScene from './SolarScene';
 
@@ -41,7 +41,9 @@ export default function SolarCanvas({ bodies, selectedIndex, reducedMotion }: Pr
         <ambientLight intensity={0.35} />
         <directionalLight position={[6, 6, 6]} intensity={1.1} />
         <pointLight position={[-6, -4, -4]} intensity={0.4} color="#42BFFF" />
-        <SolarScene bodies={bodies} selectedIndex={selectedIndex} reducedMotion={reducedMotion} />
+        <Suspense fallback={null}>
+          <SolarScene bodies={bodies} selectedIndex={selectedIndex} reducedMotion={reducedMotion} />
+        </Suspense>
       </Canvas>
     </div>
   );
