@@ -64,13 +64,13 @@ export default function PlanetCanvas({
   }, []);
 
   return (
-    <div className="planet-canvas-wrap" style={{ position: 'relative', width: '100%', height: '100%', minHeight: '300px' }}>
+    <div className="planet-canvas-wrap" style={{ position: 'relative', width: '100%', height: '100%', minHeight: '300px', overflow: 'hidden', maxWidth: '100vw' }}>
       <CanvasErrorBoundary fallback={<PlanetFallback body={body} />}>
         <Canvas
           className="planet-canvas"
           orthographic
           frameloop="always"
-          camera={{ position: [0, 0, 10], left: -4, right: 4, top: 4, bottom: -4, near: 0.1, far: 100, zoom: 1 }}
+          camera={{ position: [0, 0, 10], left: -3, right: 3, top: 3, bottom: -3, near: 0.1, far: 100, zoom: 1 }}
           dpr={[1, 2]}
           gl={{ antialias: true, alpha: true }}
         >
