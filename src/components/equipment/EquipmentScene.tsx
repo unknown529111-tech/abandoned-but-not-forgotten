@@ -3,6 +3,7 @@
 // placeholder mesh so the viewer is always interactive.
 import { useGLTF } from '@react-three/drei';
 import type { Equipment } from '../../types';
+import Surveyor1Model from './models/Surveyor1Model';
 
 interface Props {
   equipment: Equipment;
@@ -20,6 +21,8 @@ export default function EquipmentScene({ equipment, reducedMotion }: Props) {
     <group>
       {equipment.modelUrl ? (
         <GLTFModel url={equipment.modelUrl} />
+      ) : equipment.id === 'surveyor-1' ? (
+        <Surveyor1Model reducedMotion={reducedMotion} />
       ) : (
         <mesh rotation={[0.3, 0.4, 0]}>
           <icosahedronGeometry args={[1.2, 1]} />
