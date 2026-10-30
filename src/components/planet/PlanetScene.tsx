@@ -1,6 +1,8 @@
 // src/components/planet/PlanetScene.tsx
 import * as THREE from 'three';
+import { useRef } from 'react';
 import { Html, useTexture } from '@react-three/drei';
+import { useFrame } from '@react-three/fiber';
 import type { Body, Equipment } from '../../types';
 
 interface Props {
@@ -53,9 +55,17 @@ function coordToVec3(eq: Equipment, noCoordIndex: number, totalNoCoord: number):
   return [r * Math.sin(phi) * Math.cos(theta), r * Math.cos(phi), r * Math.sin(phi) * Math.sin(theta)];
 }
 
-export default function PlanetScene({ body, points, onHover, onClickPoint, hoveredId, portalRef }: Props) {
+export default function PlanetScene({ body, points, onHover, onClickPoint, hoveredId, portalRef, reducedMotion }: Props) {
   const textures = useTexture(TEXTURES);
   const tex = (textures as any)[body.id] as THREE.Texture | undefined;
+  const groupRef = useRef<THREE.Group>(null);
+
+  useFrame((_, delta) => {
+    if (groupRef.current && !reducedMotion) {
+      groupRef.current.rotation.y += delta * 0.15;
+    }
+  });
+
   // Precompute positions.
   const noCoordItems = points.filter((p) => !p.coord);
   const positions = points.map((eq) => {
@@ -64,7 +74,7 @@ export default function PlanetScene({ body, points, onHover, onClickPoint, hover
   });
 
   return (
-    <group>
+    <group ref={groupRef}>
       {/* Starfield removed: in orthographic view the sphere edge showed as a
           "lightning ring" around the planet. Stars live on the Solar page. */}
 
