@@ -70,30 +70,32 @@ export default function TimelinePage() {
         </span>
       </header>
 
-      {/* Body filter */}
-      <div className="timeline-filter" style={{ display: 'flex', gap: '8px', padding: '8px 16px', flexWrap: 'wrap' }}>
-        <button
-          type="button"
-          className={`solar-strip__btn ${!filterBody ? 'solar-strip__btn--active' : ''}`}
-          onClick={() => setFilterBody(null)}
-        >
-          All
-        </button>
-        {bodies.map((b) => {
-          const count = timelineItems.filter((e) => e.bodyId === b.id).length;
-          if (count === 0) return null;
-          return (
-            <button
-              key={b.id}
-              type="button"
-              className={`solar-strip__btn ${filterBody === b.id ? 'solar-strip__btn--active' : ''}`}
-              onClick={() => setFilterBody(b.id)}
-            >
-              {b.name[lang]} ({count})
-            </button>
-          );
-        })}
-      </div>
+      {/* Body filter — only show when viewing all */}
+      {!filterBody && (
+        <div className="timeline-filter" style={{ display: 'flex', gap: '8px', padding: '8px 16px', flexWrap: 'wrap' }}>
+          <button
+            type="button"
+            className={`solar-strip__btn ${!filterBody ? 'solar-strip__btn--active' : ''}`}
+            onClick={() => setFilterBody(null)}
+          >
+            All
+          </button>
+          {bodies.map((b) => {
+            const count = timelineItems.filter((e) => e.bodyId === b.id).length;
+            if (count === 0) return null;
+            return (
+              <button
+                key={b.id}
+                type="button"
+                className={`solar-strip__btn ${filterBody === b.id ? 'solar-strip__btn--active' : ''}`}
+                onClick={() => setFilterBody(b.id)}
+              >
+                {b.name[lang]} ({count})
+              </button>
+            );
+          })}
+        </div>
+      )}
 
       <main className="timeline-main">
         {/* Desktop: horizontal scrollable timeline */}
