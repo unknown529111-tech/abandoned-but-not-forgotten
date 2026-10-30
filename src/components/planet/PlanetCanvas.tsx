@@ -48,7 +48,7 @@ export default function PlanetCanvas({
   const handleChange = () => {
     const controls = controlsRef.current;
     if (!controls) return;
-    const cam = controls.object as THREE.PerspectiveCamera;
+    const cam = controls.object as THREE.OrthographicCamera;
     onCameraChange({ x: controls.target.x, y: controls.target.y, zoom: cam.zoom || 1 });
   };
 
@@ -56,7 +56,7 @@ export default function PlanetCanvas({
     const controls = controlsRef.current;
     if (!controls) return;
     controls.target.set(initialCamera.x || 0, initialCamera.y || 0, 0);
-    const cam = controls.object as THREE.PerspectiveCamera;
+    const cam = controls.object as THREE.OrthographicCamera;
     cam.zoom = initialCamera.zoom || 1;
     cam.updateProjectionMatrix();
     controls.update();
@@ -68,8 +68,9 @@ export default function PlanetCanvas({
       <CanvasErrorBoundary fallback={<PlanetFallback body={body} />}>
         <Canvas
           className="planet-canvas"
+          orthographic
           frameloop="always"
-          camera={{ position: [0, 0, 10], fov: 45, near: 0.1, far: 1000 }}
+          camera={{ position: [0, 0, 10], left: -4, right: 4, top: 4, bottom: -4, near: 0.1, far: 100, zoom: 1 }}
           dpr={[1, 2]}
           gl={{ antialias: true, alpha: true }}
         >
