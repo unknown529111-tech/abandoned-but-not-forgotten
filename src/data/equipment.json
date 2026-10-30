@@ -125,7 +125,22 @@
         "title": "NASA JPL - Mars 3 lander found",
         "url": "https://www.jpl.nasa.gov/news/nasa-mars-orbiter-images-may-show-1971-soviet-lander/"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "First human-made object to reach Mars surface",
+        "Crashed on arrival"
+      ],
+      "ar": [
+        "أول جسم بشري يبلغ سطح المريخ",
+        "تحطم عند الوصول"
+      ]
+    },
+    "coord": {
+      "lat": -44.0,
+      "lon": 313.0,
+      "source": "USSR Mars 2 crash (approximate)"
+    }
   },
   {
     "id": "mars-3",
@@ -573,7 +588,19 @@
         "title": "NASA GISS Mars24 Lander Missions",
         "url": "https://www.giss.nasa.gov/tools/mars24/help/landers.html"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "First Chinese rover on Mars",
+        "Explored Utopia Planitia",
+        "Demonstrated Chinese Mars landing capability"
+      ],
+      "ar": [
+        "أول روفر صيني على المريخ",
+        "استكشف يوتوببا بلانيشا",
+        "أثبت قدرة الصين على الهبوط على المريخ"
+      ]
+    }
   },
   {
     "id": "beagle-2",
@@ -606,7 +633,17 @@
         "title": "NASA GISS Mars24 Lander Missions",
         "url": "https://www.giss.nasa.gov/tools/mars24/help/landers.html"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "First European attempt to land on Mars",
+        "Landed but failed to deploy (rediscovered 2015)"
+      ],
+      "ar": [
+        "أول محاولة أوروبية للهبوط على المريخ",
+        "هبط لكن فشل في الانتشار (أُعيد اكتشافه 2015)"
+      ]
+    }
   },
   {
     "id": "schiaparelli",
@@ -641,7 +678,17 @@
         "title": "NASA GISS Mars24 Lander Missions",
         "url": "https://www.giss.nasa.gov/tools/mars24/help/landers.html"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "Tested entry, descent and landing technologies",
+        "Crashed but returned valuable data"
+      ],
+      "ar": [
+        "اختبر تقنيات الدخول والهبوط",
+        "تحطم لكن أرسل بيانات قيمة"
+      ]
+    }
   },
   {
     "id": "mars-polar-lander",
@@ -675,7 +722,17 @@
         "title": "NASA GISS Mars24 Lander Missions",
         "url": "https://www.giss.nasa.gov/tools/mars24/help/landers.html"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "Attempted first Mars polar landing",
+        "Lost during descent"
+      ],
+      "ar": [
+        "حاول أول هبوط قطبي على المريخ",
+        "فقد أثناء الهبوط"
+      ]
+    }
   },
   {
     "id": "lunokhod-1",
@@ -758,7 +815,19 @@
         "title": "NASA Moon Missions",
         "url": "https://science.nasa.gov/moon/missions/"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "Second Soviet lunar rover",
+        "Travelled 39 km on the Moon (record until 2014)",
+        "Operated for 4 months"
+      ],
+      "ar": [
+        "ثاني روفر قمري سوفيتي",
+        "قطع 39 كم على القمر (رقم قياسي حتى 2014)",
+        "عمل 4 أشهر"
+      ]
+    }
   },
   {
     "id": "apollo-11-lm",
@@ -840,7 +909,19 @@
         "title": "NASA - Apollo 15",
         "url": "https://www.nasa.gov/mission/apollo-15/"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "First lunar rover used on the Moon",
+        "Travelled 27.8 km total",
+        "Collected 77 kg of lunar samples"
+      ],
+      "ar": [
+        "أول روفر قمري مستخدم على القمر",
+        "قطع 27.8 كم إجمالاً",
+        "جمع 77 كغ من عينات القمر"
+      ]
+    }
   },
   {
     "id": "apollo-17-lrv",
@@ -877,7 +958,19 @@
         "title": "NASA - Apollo 17",
         "url": "https://www.nasa.gov/mission/apollo-17/"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "Last lunar rover used on the Moon",
+        "Longest rover traverse (35.9 km)",
+        "Collected 110 kg of lunar samples"
+      ],
+      "ar": [
+        "آخر روفر قمري مستخدم على القمر",
+        "أطول مسار للروفر (35.9 كم)",
+        "جمع 110 كغ من عينات القمر"
+      ]
+    }
   },
   {
     "id": "surveyor-1",
@@ -905,7 +998,25 @@
         "title": "NASA Moon Missions",
         "url": "https://science.nasa.gov/moon/missions/"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "First U.S. soft landing on the Moon",
+        "Returned 11,240 images",
+        "Confirmed safe landing surface"
+      ],
+      "ar": [
+        "أول هبوط ناعم أمريكي على القمر",
+        "أرسل 11,240 صورة",
+        "أكد أمان سطح الهبوط"
+      ]
+    },
+    "coord": {
+      "lat": -2.46,
+      "lon": 316.68,
+      "source": "NASA Science - Surveyor 1 (2.46 S, 43.32 W)"
+    },
+    "lastContactDate": "1967-01-07"
   },
   {
     "id": "surveyor-3",
@@ -933,7 +1044,25 @@
         "title": "NASA Moon Missions",
         "url": "https://science.nasa.gov/moon/missions/"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "Soft-landed in Oceanus Procellarum",
+        "Visited by Apollo 12 crew",
+        "Returned 6,315 images"
+      ],
+      "ar": [
+        "هبط ناعماً في أوقيانوس بروسلاروم",
+        "زاره طاقم أبولو 12",
+        "أرسل 6,315 صورة"
+      ]
+    },
+    "coord": {
+      "lat": -3.01,
+      "lon": 336.58,
+      "source": "NSSDC - Surveyor 3 (3.0 S, 23.4 W)"
+    },
+    "lastContactDate": "1967-05-04"
   },
   {
     "id": "surveyor-6",
@@ -970,7 +1099,20 @@
         "title": "NASA Moon Missions",
         "url": "https://science.nasa.gov/moon/missions/"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "First spacecraft to lift off from the Moon",
+        "Soft-landed in Sinus Medii",
+        "Returned 30,027 images"
+      ],
+      "ar": [
+        "أول مركبة تقلع من القمر",
+        "هبط ناعماً في سينوس ميدي",
+        "أرسل 30,027 صورة"
+      ]
+    },
+    "lastContactDate": "1967-12-14"
   },
   {
     "id": "chang-e-3",
@@ -1007,7 +1149,20 @@
         "title": "NASA Moon Missions",
         "url": "https://science.nasa.gov/moon/missions/"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "First Chinese soft landing on the Moon",
+        "Deployed Yutu rover",
+        "Operated for 31 months"
+      ],
+      "ar": [
+        "أول هبوط ناعم صيني على القمر",
+        "نشر روفر يوتو",
+        "عمل 31 شهراً"
+      ]
+    },
+    "lastContactDate": "2016-08-03"
   },
   {
     "id": "chang-e-4",
@@ -1043,7 +1198,12 @@
         "title": "NASA Moon Missions",
         "url": "https://science.nasa.gov/moon/missions/"
       }
-    ]
+    ],
+    "coord": {
+      "lat": -45.4,
+      "lon": 177.6,
+      "source": "LROC (NASA/GSFC/ASU)"
+    }
   },
   {
     "id": "chandrayaan-3",
@@ -1126,7 +1286,19 @@
         "title": "JAXA - SLIM conclusion",
         "url": "https://global.jaxa.jp/press/2024/08/20240826-1_e.html"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "First Japanese soft landing on the Moon",
+        "Demonstrated precision landing (100 m accuracy)",
+        "Landed upside down but survived"
+      ],
+      "ar": [
+        "أول هبوط ناعم ياباني على القمر",
+        "أثبت هبوطاً دقيقاً (100 م)",
+        "هبط مقلوباً لكن نجا"
+      ]
+    }
   },
   {
     "id": "beresheet",
@@ -1155,7 +1327,25 @@
         "title": "NASA Moon Missions",
         "url": "https://science.nasa.gov/moon/missions/"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "First Israeli lunar mission",
+        "First privately funded Moon landing attempt",
+        "Crashed but reached lunar orbit"
+      ],
+      "ar": [
+        "أول مهمة قمرية إسرائيلية",
+        "أول محاولة هبوط قمري بتمويل خاص",
+        "تحطم لكن وصل للمدار القمري"
+      ]
+    },
+    "coord": {
+      "lat": 32.59,
+      "lon": 340.6,
+      "source": "SpaceIL / IAI (crash site)"
+    },
+    "lastContactDate": "2019-04-11"
   },
   {
     "id": "peregrine-m1",
@@ -1182,7 +1372,18 @@
         "title": "NASA Moon Missions",
         "url": "https://science.nasa.gov/moon/missions/"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "First U.S. commercial lunar lander attempt",
+        "Failed to reach Moon (propellant leak)"
+      ],
+      "ar": [
+        "أول محاولة هبوط قمري تجاري أمريكي",
+        "فشل في الوصول للقمر (تسرب وقود)"
+      ]
+    },
+    "lastContactDate": "2024-01-18"
   },
   {
     "id": "im-1-odysseus",
@@ -1211,7 +1412,23 @@
         "title": "NASA Moon Missions",
         "url": "https://science.nasa.gov/moon/missions/"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "First U.S. commercial soft landing on the Moon",
+        "First private spacecraft on the Moon"
+      ],
+      "ar": [
+        "أول هبوط ناعم تجاري أمريكي على القمر",
+        "أول مركبة خاصة على القمر"
+      ]
+    },
+    "coord": {
+      "lat": 80.1,
+      "lon": 1.4,
+      "source": "Intuitive Machines (Malapert A)"
+    },
+    "lastContactDate": "2024-03-23"
   },
   {
     "id": "lro",
@@ -1243,7 +1460,19 @@
         "title": "NASA Moon Missions",
         "url": "https://science.nasa.gov/moon/missions/"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "Mapped 98% of lunar surface",
+        "Discovered water ice in permanently shadowed regions",
+        "Found Apollo landing sites"
+      ],
+      "ar": [
+        " mapped 98% of lunar surface",
+        "اكتشف جليداً مائياً في مناطق ظليلة",
+        "عثر على مواقع هبوط أبولو"
+      ]
+    }
   },
   {
     "id": "voyager-1",
@@ -1336,7 +1565,19 @@
         "title": "NSSDC - Pioneer 10",
         "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1972-012A"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "First spacecraft to traverse the asteroid belt",
+        "First to fly past Jupiter",
+        "Escaped the solar system"
+      ],
+      "ar": [
+        "أول مركبة تعبر حزام الكويكبات",
+        "أول من يحلق بالقرب من المشتري",
+        "غادر المجموعة الشمسية"
+      ]
+    }
   },
   {
     "id": "pioneer-11",
@@ -1361,7 +1602,19 @@
         "title": "NSSDC - Pioneer 11",
         "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1973-019A"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "Second spacecraft to traverse asteroid belt",
+        "First to fly past Saturn",
+        "Escaped the solar system"
+      ],
+      "ar": [
+        "ثاني مركبة تعبر حزام الكويكبات",
+        "أول من يحلق بالقرب من زحل",
+        "غادر المجموعة الشمسية"
+      ]
+    }
   },
   {
     "id": "new-horizons",
@@ -1425,7 +1678,19 @@
         "title": "NASA Science - Hubble",
         "url": "https://science.nasa.gov/mission/hubble/"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "Revolutionized astronomy with deep-field images",
+        "Measured expansion rate of universe",
+        "Serviced 5 times by astronauts"
+      ],
+      "ar": [
+        "أ    الثورة في علم الفلك بصور الحقل العميق",
+        "قاس معدل تمدد الكون",
+        "صيانته 5 مرات من قبل رواد الفضاء"
+      ]
+    }
   },
   {
     "id": "jwst",
@@ -1457,7 +1722,19 @@
         "title": "NASA Science - Webb",
         "url": "https://science.nasa.gov/mission/webb/"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "Largest space telescope ever launched",
+        "Observes in infrared",
+        "Discovered oldest galaxies ever seen"
+      ],
+      "ar": [
+        "أكبر تلسكوب فضائي أُطلق",
+        "يرصد في الأشعة تحت الحمراء",
+        "اكتشف أقدم المجرات"
+      ]
+    }
   },
   {
     "id": "cassini",
@@ -1497,7 +1774,8 @@
         "title": "NASA Science - Cassini",
         "url": "https://science.nasa.gov/mission/cassini/"
       }
-    ]
+    ],
+    "lastContactDate": "2017-09-15"
   },
   {
     "id": "huygens",
@@ -1526,7 +1804,20 @@
         "title": "NSSDC - Huygens",
         "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1997-061C"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "First landing on Titan",
+        "Returned images and atmospheric data",
+        "Operated for 72 minutes on surface"
+      ],
+      "ar": [
+        "أول هبوط على تيتان",
+        "أرسل صوراً وبيانات جوية",
+        "عمل 72 دقيقة على السطح"
+      ]
+    },
+    "lastContactDate": "2005-01-14"
   },
   {
     "id": "galileo",
@@ -1552,7 +1843,20 @@
         "title": "NSSDC - Galileo",
         "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1989-084B"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "First spacecraft to orbit Jupiter",
+        "Discovered evidence of subsurface ocean on Europa",
+        "Studied Jupiter's moons and atmosphere"
+      ],
+      "ar": [
+        "أول مركبة تدور حول المشتري",
+        "اكتشف أدلة على محيط تحت السطح على أوروبا",
+        "درس أقمار المشتري وغلافه الجوي"
+      ]
+    },
+    "lastContactDate": "2003-09-21"
   },
   {
     "id": "juno",
@@ -1577,7 +1881,19 @@
         "title": "NSSDC - Juno",
         "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2011-040A"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "Studied Jupiter's interior and magnetic field",
+        "Closest flybys of Jupiter",
+        "Discovered new cyclone patterns at poles"
+      ],
+      "ar": [
+        "درس باطن المشتري ومجاله المغناطيسي",
+        "أقرب تحليقات بالقرب من المشتري",
+        "اكتشف أنماط إعصارية جديدة في الأقطاب"
+      ]
+    }
   },
   {
     "id": "dawn",
@@ -1603,7 +1919,20 @@
         "title": "NSSDC - Dawn",
         "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2007-043A"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "First spacecraft to orbit two extraterrestrial bodies",
+        "Studied Vesta and Ceres",
+        "Discovered bright spots on Ceres"
+      ],
+      "ar": [
+        "أول مركبة تدور حول جرمين خارج أرضيين",
+        "درس فيستا وسيريس",
+        "اكتشف بقعًا لامعة على سيريس"
+      ]
+    },
+    "lastContactDate": "2018-11-01"
   },
   {
     "id": "osiris-rex",
@@ -1629,7 +1958,19 @@
         "title": "NSSDC - OSIRIS-REx",
         "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2016-055A"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "Collected sample from asteroid Bennu",
+        "Returned sample to Earth (2023)",
+        "Studied asteroid composition"
+      ],
+      "ar": [
+        "جمع عينة من كويكب بینو",
+        "أعاد العينة إلى الأرض (2023)",
+        "درس تركيب الكويكب"
+      ]
+    }
   },
   {
     "id": "rosetta",
@@ -1655,7 +1996,20 @@
         "title": "NSSDC - Rosetta",
         "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2004-006A"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "First spacecraft to orbit a comet",
+        "Studied comet 67P/Churyumov-Gerasimenko",
+        "Deployed Philae lander"
+      ],
+      "ar": [
+        "أول مركبة تدور حول مذنب",
+        "درس المذنب 67P/تشوريوموف-جراسيمينكو",
+        "نشر لاندر فيله"
+      ]
+    },
+    "lastContactDate": "2016-09-30"
   },
   {
     "id": "philae",
@@ -1684,7 +2038,19 @@
         "title": "NSSDC - Rosetta",
         "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2004-006A"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "First landing on a comet",
+        "Returned surface data",
+        "Operated for 60 hours"
+      ],
+      "ar": [
+        "أول هبوط على مذنب",
+        "أرسل بيانات سطحية",
+        "عمل 60 ساعة"
+      ]
+    }
   },
   {
     "id": "kepler",
@@ -1709,7 +2075,20 @@
         "title": "NSSDC - Kepler",
         "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2009-011A"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "Discovered thousands of exoplanets",
+        "Found Earth-sized planets in habitable zones",
+        "Revolutionized exoplanet science"
+      ],
+      "ar": [
+        "اكتشف آلاف الكواكب خارج المجموعة الشمسية",
+        "عثر على كواكب بحجم الأرض في مناطق قابلة للسكن",
+        "أ    الثورة في علم الكواكب خارج المجموعة"
+      ]
+    },
+    "lastContactDate": "2018-10-30"
   },
   {
     "id": "spitzer",
@@ -1734,7 +2113,20 @@
         "title": "NASA Science - Spitzer",
         "url": "https://science.nasa.gov/mission/spitzer/"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "Infrared space telescope",
+        "Studied star and planet formation",
+        "Operated for 16 years"
+      ],
+      "ar": [
+        "تلسكوب فضائي للأشعة تحت الحمراء",
+        "درس تشكل النجوم والكواكب",
+        "عمل 16 عاماً"
+      ]
+    },
+    "lastContactDate": "2020-01-30"
   },
   {
     "id": "chandra",
@@ -1758,7 +2150,19 @@
         "title": "NSSDC - Chandra",
         "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1999-040B"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "X-ray observatory",
+        "Studied black holes and supernovae",
+        "Operated for 25+ years"
+      ],
+      "ar": [
+        "مرصد الأشعة السينية",
+        "درس الثقوب السوداء والمستعرات",
+        "عمل لأكثر من 25 عاماً"
+      ]
+    }
   },
   {
     "id": "parker-solar-probe",
@@ -1782,7 +2186,19 @@
         "title": "NSSDC - Parker Solar Probe",
         "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2018-065A"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "Closest approach to the Sun",
+        "Entered solar corona",
+        "Studied solar wind"
+      ],
+      "ar": [
+        "أقرب اقتراب من الشمس",
+        "دخل غلاف الشمس",
+        "درس الرياح الشمسية"
+      ]
+    }
   },
   {
     "id": "lucy",
@@ -1806,7 +2222,19 @@
         "title": "NSSDC - Lucy",
         "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2021-093A"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "First mission to Jupiter's Trojan asteroids",
+        "Will visit 8 asteroids",
+        "Named after Lucy fossil"
+      ],
+      "ar": [
+        "أول مهمة إلى كويكبات طروادة للمشتري",
+        "ستزور 8 كويكبات",
+        "سُميت على اسم أحفورة لوسي"
+      ]
+    }
   },
   {
     "id": "psyche",
@@ -1830,7 +2258,19 @@
         "title": "NSSDC - Psyche",
         "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2023-157A"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "Mission to metal-rich asteroid 16 Psyche",
+        "Studying planetary core formation",
+        "Launched 2023"
+      ],
+      "ar": [
+        "مهمة إلى كويكب 16 سايكي الغني بالمعادن",
+        "دراسة تشكل نوى الكواكب",
+        "أُطلقت 2023"
+      ]
+    }
   },
   {
     "id": "ulysses",
@@ -1855,7 +2295,20 @@
         "title": "NSSDC - Ulysses",
         "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1990-090B"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "Studied Sun's polar regions",
+        "First spacecraft to fly over Sun's poles",
+        "Operated for 18 years"
+      ],
+      "ar": [
+        "درس المناطق القطبية للشمس",
+        "أول مركبة تحلق فوق أقطاب الشمس",
+        "عمل 18 عاماً"
+      ]
+    },
+    "lastContactDate": "2009-06-30"
   },
   {
     "id": "hayabusa2",
@@ -1881,7 +2334,19 @@
         "title": "NSSDC - Hayabusa 2",
         "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2014-076A"
       }
-    ]
+    ],
+    "achievements": {
+      "en": [
+        "Returned sample from asteroid Ryugu",
+        "Deployed rovers on asteroid surface",
+        "Studied carbon-rich asteroid"
+      ],
+      "ar": [
+        "أعاد عينة من كويكب ريوغو",
+        "نشر روفرات على سطح كويكب",
+        "درس كويكباً غنياً بالكربون"
+      ]
+    }
   },
   {
     "id": "dart",
@@ -1914,6 +2379,7 @@
         "title": "NSSDC - DART",
         "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2021-110A"
       }
-    ]
+    ],
+    "lastContactDate": "2022-09-26"
   }
 ]
