@@ -106,6 +106,7 @@ export default function PlanetScene({ body, points, onHover, onClickPoint, hover
               onPointerOver={() => onHover(eq)}
               onPointerOut={() => onHover(null)}
               onClick={() => onClickPoint(eq.id)}
+              onPointerDown={(e: any) => e.stopPropagation()}
             >
               <sphereGeometry args={[0.07, 16, 16]} />
               <meshBasicMaterial color="#42BFFF" />
@@ -120,6 +121,7 @@ export default function PlanetScene({ body, points, onHover, onClickPoint, hover
                 onFocus={() => onHover(eq)}
                 onBlur={() => onHover(null)}
                 onClick={() => onClickPoint(eq.id)}
+                onPointerDown={(e: any) => e.stopPropagation()}
               >
                 <span className="planet-point__dot" />
               </button>

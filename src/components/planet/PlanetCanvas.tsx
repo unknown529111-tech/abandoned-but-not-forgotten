@@ -100,6 +100,7 @@ export default function PlanetCanvas({
             panSpeed={0.8}
             minZoom={0.4}
             maxZoom={6}
+            touches={{ ONE: THREE.TOUCH.PAN, TWO: THREE.TOUCH.DOLLY_PAN }}
             onChange={handleChange}
           />
         </Canvas>
