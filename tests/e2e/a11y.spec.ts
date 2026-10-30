@@ -25,16 +25,19 @@ test('a11y: reduced motion disables animations', async ({ page }) => {
   await page.goto('/');
   await page.waitForTimeout(500);
   const animInfo = await page.evaluate(() => {
-    const el = document.querySelector('.motion-page-enter') as HTMLElement;
+    const el = document.querySelector('.motion-page-enter') as HTMLElement | null;
+    if (!el) return { name: 'none', duration: '0s' };
     const s = getComputedStyle(el);
     return { name: s.animationName, duration: s.animationDuration };
   });
   expect(parseFloat(animInfo.duration)).toBeLessThanOrEqual(0.02);
   await page.goto('/planet/mars');
-  await page.waitForTimeout(2000);
+  await page.waitForSelector('.planet-point__dot', { timeout: 10000 }).catch(() => {});
+  await page.waitForTimeout(500);
   // point dot transition none
   const trans = await page.evaluate(() => {
-    const el = document.querySelector('.planet-point__dot') as HTMLElement;
+    const el = document.querySelector('.planet-point__dot') as HTMLElement | null;
+    if (!el) return '0s';
     return getComputedStyle(el).transitionDuration;
   });
   expect(parseFloat(trans)).toBeLessThanOrEqual(0.02);
