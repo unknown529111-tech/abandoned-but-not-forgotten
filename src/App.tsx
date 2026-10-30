@@ -19,7 +19,7 @@ export default function App() {
           <Route path="/" element={<SolarSystem />} />
           <Route path="/planet/:bodyId" element={<PlanetExplorer />} />
           <Route path="/equipment/:equipmentId" element={<EquipmentDetail />} />
-          <Route path="/timeline" element={<TimelinePage />} />
+          <Route path="/timeline/:bodyId?" element={<TimelinePage />} />
           <Route path="/404" element={<NotFound />} />
           <Route path="*" element={<Navigate to="/404" replace />} />
         </Routes>

@@ -3,16 +3,18 @@
 // Mobile: vertical list with usable touch targets. Sorted by launch date;
 // equipment without launchDate excluded (no fabrication).
 import { useMemo, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAppStore } from '../store/useAppStore';
-import type { Equipment } from '../types';
+import type { Body, Equipment } from '../types';
+import bodiesData from '../data/bodies.json';
 import equipmentData from '../data/equipment.json';
 import TimelinePoint from '../components/timeline/TimelinePoint';
 import TimelineMobileList from '../components/timeline/TimelineMobileList';
 import '../styles/timeline.css';
 
 const allEquipment = equipmentData as Equipment[];
+const bodies = bodiesData as Body[];
 
 // Equipment with a documented launch date, sorted ascending by launch date.
 const timelineItems: Equipment[] = allEquipment
@@ -22,6 +24,7 @@ const timelineItems: Equipment[] = allEquipment
 
 export default function TimelinePage() {
   const navigate = useNavigate();
+  const { bodyId } = useParams<{ bodyId?: string }>();
   const { t, i18n } = useTranslation();
   const locale = useAppStore((s) => s.locale);
 
@@ -29,10 +32,17 @@ export default function TimelinePage() {
     ? 'ar'
     : 'en';
 
+  const [filterBody, setFilterBody] = useState<string | null>(bodyId ?? null);
   const [hoveredId, setHoveredId] = useState<string | null>(null);
+
+  const filteredItems = useMemo(() => {
+    if (!filterBody) return timelineItems;
+    return timelineItems.filter((e) => e.bodyId === filterBody);
+  }, [filterBody]);
+
   const hovered = useMemo(
-    () => timelineItems.find((e) => e.id === hoveredId) ?? null,
-    [hoveredId],
+    () => filteredItems.find((e) => e.id === hoveredId) ?? null,
+    [filteredItems, hoveredId],
   );
 
   const hoverMonth = hovered
@@ -49,23 +59,48 @@ export default function TimelinePage() {
         <button
           type="button"
           className="timeline-back motion-back"
-          onClick={() => navigate('/')}
-          aria-label="Back to solar system"
+          onClick={() => navigate(filterBody ? `/planet/${filterBody}` : '/')}
+          aria-label="Back"
         >
           ← {t('backSolar')}
         </button>
-        <h1 className="timeline-title">Timeline</h1>
+        <h1 className="timeline-title">Timeline{filterBody ? ` — ${bodies.find(b => b.id === filterBody)?.name[lang] ?? filterBody}` : ''}</h1>
         <span className="timeline-count">
-          {timelineItems.length} missions
+          {filteredItems.length} missions
         </span>
       </header>
+
+      {/* Body filter */}
+      <div className="timeline-filter" style={{ display: 'flex', gap: '8px', padding: '8px 16px', flexWrap: 'wrap' }}>
+        <button
+          type="button"
+          className={`solar-strip__btn ${!filterBody ? 'solar-strip__btn--active' : ''}`}
+          onClick={() => setFilterBody(null)}
+        >
+          All
+        </button>
+        {bodies.map((b) => {
+          const count = timelineItems.filter((e) => e.bodyId === b.id).length;
+          if (count === 0) return null;
+          return (
+            <button
+              key={b.id}
+              type="button"
+              className={`solar-strip__btn ${filterBody === b.id ? 'solar-strip__btn--active' : ''}`}
+              onClick={() => setFilterBody(b.id)}
+            >
+              {b.name[lang]} ({count})
+            </button>
+          );
+        })}
+      </div>
 
       <main className="timeline-main">
         {/* Desktop: horizontal scrollable timeline */}
         <section className="timeline-desktop" aria-label="Timeline">
           <div className="timeline-track-wrap">
             <ul className="timeline-track" role="list">
-              {timelineItems.map((item, i) => (
+              {filteredItems.map((item, i) => (
                 <TimelinePoint
                   key={item.id}
                   item={item}
@@ -92,7 +127,7 @@ export default function TimelinePage() {
 
         {/* Mobile: vertical list */}
         <section className="timeline-mobile" aria-label="Timeline list">
-          <TimelineMobileList items={timelineItems} lang={lang} />
+          <TimelineMobileList items={filteredItems} lang={lang} />
         </section>
       </main>
     </div>

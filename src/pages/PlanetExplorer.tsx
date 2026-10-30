@@ -52,6 +52,14 @@ export default function PlanetExplorer() {
           ← {t('backSolar')}
         </button>
         <h1 className="planet-title">{body ? body.name[lang] : bodyId}</h1>
+        <button
+          type="button"
+          className="planet-back motion-back"
+          style={{ marginLeft: 'auto' }}
+          onClick={() => navigate(`/timeline/${bodyId}`)}
+        >
+          Timeline →
+        </button>
       </header>
 
       <div className="planet-stage">
