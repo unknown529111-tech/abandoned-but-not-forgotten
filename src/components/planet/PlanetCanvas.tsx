@@ -64,7 +64,7 @@ export default function PlanetCanvas({
   }, []);
 
   return (
-    <div className="planet-canvas-wrap" style={{ position: 'relative', width: '100%', height: '100%' }}>
+    <div className="planet-canvas-wrap" style={{ position: 'relative', width: '100%', height: '100%', minHeight: '300px' }}>
       <CanvasErrorBoundary fallback={<PlanetFallback body={body} />}>
         <Canvas
           className="planet-canvas"
