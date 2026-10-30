@@ -41,7 +41,7 @@ export default function PlanetExplorer() {
   const lang = (locale || i18n.language || 'en').startsWith('ar') ? 'ar' : 'en';
 
   return (
-    <div className="planet-page motion-side-slide" id="main">
+    <div className="planet-page" id="main">
       <header className="planet-toolbar">
         <button
           type="button"
