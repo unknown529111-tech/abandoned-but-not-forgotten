@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import './tokens.css';
 import './base.css';
 import './styles/motion.css';
+const Home = lazy(() => import('./pages/Home'));
 const SolarSystem = lazy(() => import('./pages/SolarSystem'));
 const PlanetExplorer = lazy(() => import('./pages/PlanetExplorer'));
 const EquipmentDetail = lazy(() => import('./pages/EquipmentDetail'));
@@ -13,7 +14,8 @@ export default function App() {
       <a className="skip-link" href="#main">Skip to content</a>
       <Suspense fallback={<div className="solar-loading">Loading…</div>}>
         <Routes>
-          <Route path="/" element={<SolarSystem />}/>
+          <Route path="/" element={<Home />}/>
+          <Route path="/solar" element={<SolarSystem />}/>
           <Route path="/planet/:bodyId" element={<PlanetExplorer />}/>
           <Route path="/equipment/:equipmentId" element={<EquipmentDetail />}/>
           <Route path="/timeline/:bodyId?" element={<TimelinePage />}/>
