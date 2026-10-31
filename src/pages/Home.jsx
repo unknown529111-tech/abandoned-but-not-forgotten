@@ -34,7 +34,7 @@ export default function Home() {
                 }}
             >
                 <Suspense fallback={<div className="solar-loading">Loading…</div>}>
-                    <PlanetCanvas body={earth} points={[]} reducedMotion={reducedMotion} initialCamera={{ x: 0, y: 0 }} />
+                    <PlanetCanvas body={earth} points={[]} reducedMotion={reducedMotion} initialCamera={{ x: 0, y: 0 }} onCameraChange={() => {}} onHover={() => {}} onClickPoint={() => {}} hoveredId={null} />
                 </Suspense>
                 <div
                     style={{
