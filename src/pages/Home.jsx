@@ -23,7 +23,7 @@ export default function Home() {
     }, []);
 
     return (
-        <div className="home-page" style={{ background: '#000', color: '#fff' }}>
+        <div className="home-page" style={{ background: '#05070d', color: '#e8ecf4' }}>
             <section
                 className="home-earth"
                 style={{
@@ -31,10 +31,21 @@ export default function Home() {
                     width: '100%',
                     height: '100vh',
                     overflow: 'hidden',
+                    background: 'radial-gradient(ellipse at center, #0b1a33 0%, #05070d 70%)',
                 }}
             >
-                <Suspense fallback={<div className="solar-loading">Loading…</div>}>
-                    <PlanetCanvas body={earth} points={[]} reducedMotion={reducedMotion} initialCamera={{ x: 0, y: 0 }} onCameraChange={() => {}} onHover={() => {}} onClickPoint={() => {}} hoveredId={null} />
+                <Suspense fallback={<div className="solar-loading">Loading Earth…</div>}>
+                    <PlanetCanvas
+                        body={earth}
+                        points={[]}
+                        reducedMotion={reducedMotion}
+                        initialCamera={{ x: 0, y: 0 }}
+                        interactive={false}
+                        onCameraChange={() => {}}
+                        onHover={() => {}}
+                        onClickPoint={() => {}}
+                        hoveredId={null}
+                    />
                 </Suspense>
                 <div
                     style={{
@@ -46,13 +57,30 @@ export default function Home() {
                         justifyContent: 'center',
                         pointerEvents: 'none',
                         textAlign: 'center',
-                        padding: '0 1rem',
+                        padding: '0 1.5rem',
                     }}
                 >
-                    <h1 style={{ fontSize: 'clamp(2rem, 6vw, 4.5rem)', margin: 0, lineHeight: 1.05 }}>
+                    <h1
+                        style={{
+                            fontSize: 'clamp(2.25rem, 7vw, 5rem)',
+                            margin: 0,
+                            lineHeight: 1.0,
+                            fontWeight: 700,
+                            letterSpacing: '-0.02em',
+                            textShadow: '0 2px 24px rgba(0,0,0,0.6)',
+                        }}
+                    >
                         Abandoned but not Forgotten
                     </h1>
-                    <p style={{ marginTop: '1rem', opacity: 0.8, maxWidth: '42ch' }}>
+                    <p
+                        style={{
+                            marginTop: '1.25rem',
+                            opacity: 0.75,
+                            maxWidth: '46ch',
+                            fontSize: '1.05rem',
+                            lineHeight: 1.5,
+                        }}
+                    >
                         A map of the bodies we left behind. Scroll to explore the solar system.
                     </p>
                 </div>
@@ -60,24 +88,35 @@ export default function Home() {
                     aria-hidden="true"
                     style={{
                         position: 'absolute',
-                        bottom: '2rem',
+                        bottom: '2.5rem',
                         left: '50%',
                         transform: 'translateX(-50%)',
-                        opacity: 0.7,
-                        fontSize: '0.9rem',
-                        letterSpacing: '0.1em',
+                        opacity: 0.6,
+                        fontSize: '0.8rem',
+                        letterSpacing: '0.18em',
                         textTransform: 'uppercase',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        gap: '0.5rem',
                     }}
                 >
-                    ↓ Scroll
+                    <span>Scroll</span>
+                    <span style={{ fontSize: '1.2rem' }}>↓</span>
                 </div>
             </section>
 
             <section
                 className="home-solar"
-                style={{ minHeight: '100vh', position: 'relative' }}
+                style={{
+                    position: 'relative',
+                    width: '100%',
+                    height: '100vh',
+                    overflow: 'hidden',
+                    background: '#000',
+                }}
             >
-                <Suspense fallback={<div className="solar-loading">Loading…</div>}>
+                <Suspense fallback={<div className="solar-loading">Loading solar system…</div>}>
                     <SolarCanvas bodies={bodies} selectedIndex={2} reducedMotion={reducedMotion} />
                 </Suspense>
             </section>

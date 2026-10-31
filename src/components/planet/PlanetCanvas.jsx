@@ -17,7 +17,7 @@ class CanvasErrorBoundary extends Component {
         return this.state.hasError ? this.props.fallback : this.props.children;
     }
 }
-export default function PlanetCanvas({ body, points, reducedMotion, initialCamera, onCameraChange, onHover, onClickPoint, hoveredId, }) {
+export default function PlanetCanvas({ body, points, reducedMotion, initialCamera, onCameraChange, onHover, onClickPoint, hoveredId, interactive = true, }) {
     const controlsRef = useRef(null);
     const overlayRef = useRef(null);
     const handleChange = () => {
@@ -49,7 +49,7 @@ export default function PlanetCanvas({ body, points, reducedMotion, initialCamer
           <Suspense fallback={null}>
             <PlanetScene body={body} points={points} reducedMotion={reducedMotion} onHover={onHover} onClickPoint={onClickPoint} hoveredId={hoveredId} portalRef={overlayRef}/>
           </Suspense>
-          <OrbitControls ref={controlsRef} makeDefault target={[initialCamera.x || 0, initialCamera.y || 0, 0]} enableRotate={false} enablePan enableZoom zoomSpeed={0.8} panSpeed={0.8} minZoom={0.4} maxZoom={6} touches={{ ONE: THREE.TOUCH.PAN, TWO: THREE.TOUCH.DOLLY_PAN }} onChange={handleChange}/>
+          <OrbitControls ref={controlsRef} makeDefault target={[initialCamera.x || 0, initialCamera.y || 0, 0]} enableRotate={interactive} enablePan={interactive} enableZoom={interactive} zoomSpeed={0.8} panSpeed={0.8} minZoom={0.4} maxZoom={6} touches={{ ONE: THREE.TOUCH.PAN, TWO: THREE.TOUCH.DOLLY_PAN }} onChange={handleChange}/>
         </Canvas>
       </CanvasErrorBoundary>
       <div ref={overlayRef} className="planet-html-layer" style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}/>
